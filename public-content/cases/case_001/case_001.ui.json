@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "primaryNavigation": [
+    {
+      "id": "nav_case",
+      "label": "CASE"
+    },
+    {
+      "id": "nav_people",
+      "label": "PEOPLE"
+    },
+    {
+      "id": "nav_evidence",
+      "label": "EVIDENCE"
+    },
+    {
+      "id": "nav_places",
+      "label": "PLACES"
+    },
+    {
+      "id": "nav_notes",
+      "label": "NOTES"
+    }
+  ],
+  "caseSections": [
+    "INCIDENT_BRIEFING",
+    "INCIDENT_REPORT",
+    "PLAYER_VISIBLE_TIMELINE",
+    "PENDING_REQUESTS",
+    "CASE_SUBMISSION"
+  ],
+  "peopleFeatures": [
+    "CHARACTER_DIRECTORY",
+    "CHARACTER_PROFILE",
+    "INTERVIEW_HISTORY",
+    "FREE_FORM_INTERVIEW",
+    "PRESENT_EVIDENCE"
+  ],
+  "evidenceFeatures": [
+    "EVIDENCE_LIST",
+    "EVIDENCE_DETAIL",
+    "CHAIN_OF_CUSTODY",
+    "AVAILABLE_FORENSIC_TESTS",
+    "REVEALED_RESULTS"
+  ],
+  "locationFeatures": [
+    "KNOWN_LOCATION_LIST",
+    "TRAVEL",
+    "AVAILABLE_SEARCH_ACTIONS",
+    "AUTHORIZED_SEARCH_ZONES"
+  ],
+  "caseActionFeatures": [
+    "FORENSIC_REQUEST",
+    "WARRANT_APPLICATION",
+    "DETENTION",
+    "ARREST",
+    "PROSECUTOR_CONSULTATION",
+    "RECOMMEND_CHARGES",
+    "SUBMIT_CASE"
+  ],
+  "prohibitedPlayerIndicators": [
+    "CREDIBILITY_SCORE",
+    "TRUTH_SCORE",
+    "DECEPTION_METER",
+    "GUILT_PROBABILITY"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "jurisdiction": {
+    "name": "Riverton County",
+    "style": "FICTIONAL_US",
+    "proceduralAuthenticityTarget": 70,
+    "gameplaySimplificationTarget": 30
+  },
+  "playerAuthority": {
+    "mayRequestWarrants": true,
+    "mayConductAuthorizedSearches": true,
+    "mayOrderForensicTests": true,
+    "mayTemporarilyDetain": true,
+    "mayArrestWhenLegallySupported": true,
+    "mayConsultProsecutor": true,
+    "mayRecommendCharges": true,
+    "makesFinalChargingDecision": false
+  },
+  "publicLegalConcepts": [
+    {
+      "id": "legal_concept_001",
+      "name": "Consent",
+      "description": "A lawful search may sometimes be conducted with valid permission from a person authorized to give it. Permission may be limited or withdrawn."
+    },
+    {
+      "id": "legal_concept_002",
+      "name": "Search Authority",
+      "description": "Private areas generally require a lawful basis before they may be searched."
+    },
+    {
+      "id": "legal_concept_003",
+      "name": "Warrant Scope",
+      "description": "A warrant authorizes only the places and categories described by its approved scope."
+    },
+    {
+      "id": "legal_concept_004",
+      "name": "Reasonable Suspicion",
+      "description": "Temporary detention requires specific, articulable investigative support."
+    },
+    {
+      "id": "legal_concept_005",
+      "name": "Probable Cause",
+      "description": "An arrest or warrant requires stronger factual support than mere suspicion."
+    },
+    {
+      "id": "legal_concept_006",
+      "name": "Procedural Consequences",
+      "description": "Improper investigative actions may weaken evidence, damage cooperation, or affect later prosecutorial decisions."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "schemaVersion": 1,
+    "id": "case_001",
+    "version": "0.1.0",
+    "title": "Case 001",
+    "shortDescription": "A suspicious death inside a private residence requires a careful reconstruction of events, relationships, evidence, and lawful investigative steps.",
+    "jurisdictionName": "Riverton County",
+    "difficulty": "INTRODUCTORY",
+    "estimatedPlaytimeMinutes": 75
+  },
+  "presentation": {
+    "briefingTitle": "Initial Incident Briefing",
+    "briefingBody": "Patrol officers responded to a private residence after circumstances suggested something was wrong. One adult was found deceased inside. The scene has been secured and you have been assigned as lead detective. Your responsibility is to determine the circumstances of the death, identify any criminal responsibility supported by the investigation, preserve evidence, and make lawful investigative decisions.",
+    "initialObjectives": [
+      "Review the initial incident information.",
+      "Examine available scene information.",
+      "Identify and interview relevant persons.",
+      "Develop and test investigative theories.",
+      "Use lawful investigative authority when required.",
+      "Submit the case when you believe the investigation is ready."
+    ],
+    "toneTags": [
+      "grounded",
+      "procedural",
+      "contemporary",
+      "investigative",
+      "character-driven"
+    ],
+    "contentWarnings": [
+      "Fictional homicide investigation",
+      "Death",
+      "Crime-scene themes"
+    ]
+  },
+  "startingState": {
+    "startingGameTime": "2026-04-14T08:00:00-04:00",
+    "startingLocationId": "loc_001",
+    "startingKnownCharacterIds": [],
+    "startingKnownLocationIds": [
+      "loc_001"
+    ],
+    "startingKnownFactIds": [],
+    "startingKnownEvidenceIds": [],
+    "startingRecordIds": [
+      "record_001"
+    ]
+  },
+  "scope": {
+    "characterCount": 6,
+    "locationCount": 4,
+    "evidenceCount": 10,
+    "factCount": 0,
+    "outcomeCount": 10
+  }
+}

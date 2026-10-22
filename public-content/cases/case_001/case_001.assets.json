@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "assets": [
+    {
+      "id": "asset_001",
+      "type": "DOCUMENT",
+      "usage": "INITIAL_INCIDENT_REPORT",
+      "source": "PLACEHOLDER"
+    },
+    {
+      "id": "asset_002",
+      "type": "IMAGE",
+      "usage": "CASE_COVER",
+      "source": "PLACEHOLDER"
+    }
+  ]
+}
