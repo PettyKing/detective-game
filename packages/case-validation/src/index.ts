@@ -4,5 +4,7 @@ export * from "./leakage-boundary.js";
 export * from "./route-recoverability.js";
 export * from "./deterministic-rules.js";
 export * from "./validation-report.js";
-export * from "./protected-package-validation.js";
 export * from "./case-package-loader.js";
+export * from "./protected-package-validation.js";
+export * from "./real-package-integrity.js";
+export * from "./real-zod-validation.js";

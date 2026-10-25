@@ -1,3 +1,420 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "jurisdiction": {
+    "name": "Riverton County",
+    "style": "FICTIONAL_US",
+    "proceduralAuthenticityTarget": 70,
+    "gameplaySimplificationTarget": 30
+  },
+  "searchZones": [
+    {
+      "id": "search_zone_001",
+      "locationId": "loc_001",
+      "name": "Grant Holloway workshop",
+      "defaultAuthority": "CRIME_SCENE_AUTHORIZED"
+    },
+    {
+      "id": "search_zone_002",
+      "locationId": "loc_002",
+      "name": "Hollis and Holloway business records",
+      "defaultAuthority": "BUSINESS_RECORD_ACCESS_REQUIRED"
+    },
+    {
+      "id": "search_zone_003",
+      "locationId": "loc_003",
+      "name": "Ashley Williams vehicle",
+      "defaultAuthority": "SEARCH_AUTHORITY_REQUIRED"
+    },
+    {
+      "id": "search_zone_004",
+      "locationId": "loc_003",
+      "name": "Ashley Williams residence and property",
+      "defaultAuthority": "SEARCH_AUTHORITY_REQUIRED"
+    },
+    {
+      "id": "search_zone_005",
+      "locationId": "loc_003",
+      "name": "Recovered digital-device contents",
+      "defaultAuthority": "DIGITAL_EXAMINATION_AUTHORITY_REQUIRED"
+    }
+  ],
+  "consentRules": [
+    {
+      "id": "legal_rule_001",
+      "characterId": "char_002",
+      "searchZoneIds": [
+        "search_zone_003",
+        "search_zone_004"
+      ],
+      "defaultResponse": "REFUSE",
+      "scope": [],
+      "withdrawable": true,
+      "notes": "Ashley does not voluntarily consent to a complete search of her vehicle or residence."
+    }
+  ],
+  "detentionRules": [
+    {
+      "id": "legal_rule_002",
+      "targetCharacterId": "char_002",
+      "standard": "REASONABLE_SUSPICION",
+      "supportGroups": [
+        {
+          "id": "support_group_001",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_015",
+            "fact_016",
+            "fact_021",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "support_group_002",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_010",
+            "fact_012",
+            "fact_013",
+            "fact_022"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 2,
+      "result": "TEMPORARY_INVESTIGATIVE_DETENTION_SUPPORTED"
+    },
+    {
+      "id": "legal_rule_003",
+      "targetCharacterId": "char_004",
+      "standard": "REASONABLE_SUSPICION",
+      "supportGroups": [
+        {
+          "id": "support_group_003",
+          "minimumMatches": 2,
+          "factIds": [
+            "fact_005",
+            "fact_006",
+            "fact_007",
+            "fact_008"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 1,
+      "result": "TEMPORARY_INVESTIGATIVE_DETENTION_SUPPORTED"
+    }
+  ],
+  "warrantRules": [
+    {
+      "id": "legal_rule_004",
+      "warrantType": "SEARCH",
+      "targetCharacterId": "char_002",
+      "searchZoneIds": [
+        "search_zone_003"
+      ],
+      "purpose": "Search Ashley Williams's SUV for trace evidence, relevant clothing or footwear, biological evidence, and evidence associated with the homicide.",
+      "standard": "PROBABLE_CAUSE",
+      "supportGroups": [
+        {
+          "id": "support_group_004",
+          "description": "Evidence establishing that Grant's death is suspicious or homicidal.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_002",
+            "fact_003",
+            "fact_019"
+          ]
+        },
+        {
+          "id": "support_group_005",
+          "description": "Evidence placing Ashley or her vehicle near Grant during the relevant time.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_016",
+            "fact_021",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "support_group_006",
+          "description": "Evidence connecting Ashley to motive, deception, or concealment.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_012",
+            "fact_013",
+            "fact_015",
+            "fact_022"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 3,
+      "authorizedEvidenceCategories": [
+        "BIOLOGICAL_TRACE",
+        "CLOTHING",
+        "FOOTWEAR",
+        "CLEANING_MATERIALS",
+        "TRACE_EVIDENCE"
+      ],
+      "authorizedEvidenceIds": [
+        "ev_009"
+      ],
+      "resultOnApproval": "WARRANT_APPROVED",
+      "resultOnFailure": "WARRANT_DENIED"
+    },
+    {
+      "id": "legal_rule_005",
+      "warrantType": "SEARCH",
+      "targetCharacterId": "char_002",
+      "searchZoneIds": [
+        "search_zone_004"
+      ],
+      "purpose": "Search Ashley Williams's residence and associated property for Grant Holloway's missing laptop and other specifically described evidence connected to concealment and financial fraud.",
+      "standard": "PROBABLE_CAUSE",
+      "supportGroups": [
+        {
+          "id": "support_group_007",
+          "description": "Evidence showing that Grant's laptop is missing and relevant to the investigation.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_020"
+          ]
+        },
+        {
+          "id": "support_group_008",
+          "description": "Evidence connecting Ashley to Grant during the homicide period.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_015",
+            "fact_016",
+            "fact_021",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "support_group_009",
+          "description": "Evidence giving Ashley a reason to remove or conceal Grant's property.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_010",
+            "fact_012",
+            "fact_013",
+            "fact_022"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 3,
+      "authorizedEvidenceCategories": [
+        "MISSING_PROPERTY",
+        "COMPUTER",
+        "FINANCIAL_RECORDS",
+        "RELEVANT_CLOTHING",
+        "RELEVANT_FOOTWEAR"
+      ],
+      "authorizedEvidenceIds": [
+        "ev_010"
+      ],
+      "resultOnApproval": "WARRANT_APPROVED",
+      "resultOnFailure": "WARRANT_DENIED"
+    },
+    {
+      "id": "legal_rule_006",
+      "warrantType": "DIGITAL_SEARCH",
+      "targetCharacterId": "char_001",
+      "searchZoneIds": [
+        "search_zone_005"
+      ],
+      "purpose": "Forensically examine Grant Holloway's recovered laptop for records relating to Northline Fixtures, relevant communications, recent financial analysis, and evidence of concealment.",
+      "standard": "PROBABLE_CAUSE",
+      "supportGroups": [
+        {
+          "id": "support_group_010",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_024"
+          ]
+        },
+        {
+          "id": "support_group_011",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_010",
+            "fact_011",
+            "fact_012",
+            "fact_013"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 2,
+      "authorizedEvidenceCategories": [
+        "FINANCIAL_RECORDS",
+        "NORTHLINE_FIXTURES_RECORDS",
+        "RECENT_DOCUMENTS",
+        "RELEVANT_COMMUNICATIONS"
+      ],
+      "authorizedEvidenceIds": [
+        "ev_010"
+      ],
+      "resultOnApproval": "DIGITAL_SEARCH_AUTHORIZED",
+      "resultOnFailure": "DIGITAL_SEARCH_DENIED"
+    }
+  ],
+  "probableCauseRules": [
+    {
+      "id": "legal_rule_007",
+      "targetCharacterId": "char_002",
+      "purpose": "ARREST",
+      "supportGroups": [
+        {
+          "id": "support_group_012",
+          "description": "Evidence supporting homicide rather than accident.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_002",
+            "fact_003",
+            "fact_019"
+          ]
+        },
+        {
+          "id": "support_group_013",
+          "description": "Evidence establishing Ashley's opportunity or presence.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_016",
+            "fact_021",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "support_group_014",
+          "description": "Evidence establishing motive or material deception.",
+          "minimumMatches": 2,
+          "factIds": [
+            "fact_010",
+            "fact_012",
+            "fact_013",
+            "fact_015",
+            "fact_022"
+          ]
+        },
+        {
+          "id": "support_group_015",
+          "description": "Strong physical or property corroboration.",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_023",
+            "fact_024"
+          ]
+        }
+      ],
+      "minimumSupportGroupsSatisfied": 3,
+      "strongCorroborationGroupId": "support_group_015",
+      "strongCorroborationMaySubstituteForOneOtherGroup": true,
+      "result": "PROBABLE_CAUSE_SUPPORTED"
+    }
+  ],
+  "arrestRules": [
+    {
+      "id": "legal_rule_008",
+      "targetCharacterId": "char_002",
+      "requiresProbableCauseRuleId": "legal_rule_007",
+      "resultOnSatisfied": "ARREST_AUTHORIZED",
+      "resultOnFailure": "ARREST_NOT_SUPPORTED"
+    }
+  ],
+  "suppressionRules": [
+    {
+      "id": "legal_rule_009",
+      "violation": "VEHICLE_SEARCH_WITHOUT_VALID_AUTHORITY",
+      "affectedEvidenceIds": [
+        "ev_009"
+      ],
+      "affectedFactIds": [
+        "fact_023"
+      ],
+      "consequence": "SUPPRESS_EVIDENCE",
+      "legalUsability": "SUPPRESSED",
+      "prosecutorImpact": "MAJOR_NEGATIVE"
+    },
+    {
+      "id": "legal_rule_010",
+      "violation": "RESIDENCE_SEARCH_WITHOUT_VALID_AUTHORITY",
+      "affectedEvidenceIds": [
+        "ev_010"
+      ],
+      "affectedFactIds": [
+        "fact_024"
+      ],
+      "consequence": "SUPPRESS_EVIDENCE",
+      "legalUsability": "SUPPRESSED",
+      "prosecutorImpact": "MAJOR_NEGATIVE"
+    },
+    {
+      "id": "legal_rule_011",
+      "violation": "SEARCH_EXCEEDS_WARRANT_SCOPE",
+      "affectedEvidenceIds": [],
+      "affectedFactIds": [],
+      "consequence": "SUPPRESS_ONLY_EVIDENCE_OBTAINED_OUTSIDE_SCOPE",
+      "legalUsability": "CONDITIONALLY_SUPPRESSED",
+      "prosecutorImpact": "NEGATIVE"
+    },
+    {
+      "id": "legal_rule_012",
+      "violation": "DIGITAL_CONTENT_SEARCH_WITHOUT_AUTHORITY",
+      "affectedEvidenceIds": [
+        "ev_010"
+      ],
+      "affectedFactIds": [
+        "fact_013"
+      ],
+      "consequence": "SUPPRESS_DIGITAL_CONTENTS_WHILE_PRESERVING_LAWFUL_PHYSICAL_RECOVERY_WHEN_APPLICABLE",
+      "legalUsability": "PARTIALLY_SUPPRESSED",
+      "prosecutorImpact": "MAJOR_NEGATIVE"
+    },
+    {
+      "id": "legal_rule_013",
+      "violation": "MATERIAL_FALSE_STATEMENT_IN_WARRANT_APPLICATION",
+      "affectedEvidenceIds": [],
+      "affectedFactIds": [],
+      "consequence": "INVALIDATE_AFFECTED_WARRANT_AND_REVIEW_DERIVATIVE_EVIDENCE",
+      "legalUsability": "REVIEW_REQUIRED",
+      "prosecutorImpact": "SEVERE_NEGATIVE"
+    },
+    {
+      "id": "legal_rule_014",
+      "violation": "CHAIN_OF_CUSTODY_DEFECT",
+      "affectedEvidenceIds": [],
+      "affectedFactIds": [],
+      "consequence": "REDUCE_EVIDENTIARY_WEIGHT_UNLESS_DEFECT_IS_SEVERE",
+      "legalUsability": "WEIGHT_REDUCED",
+      "prosecutorImpact": "NEGATIVE"
+    }
+  ],
+  "prosecutorConsultationRules": [
+    {
+      "id": "legal_rule_015",
+      "consultationType": "PRE_WARRANT",
+      "minimumKnownFactCount": 2,
+      "preferredFactIds": [
+        "fact_002",
+        "fact_015",
+        "fact_016",
+        "fact_020"
+      ],
+      "result": "PROSECUTOR_MAY_REVIEW_WARRANT_BASIS"
+    },
+    {
+      "id": "legal_rule_016",
+      "consultationType": "PRE_ARREST",
+      "minimumKnownFactCount": 4,
+      "preferredFactIds": [
+        "fact_002",
+        "fact_012",
+        "fact_016",
+        "fact_022",
+        "fact_023",
+        "fact_024"
+      ],
+      "result": "PROSECUTOR_MAY_REVIEW_ARREST_AND_CHARGING_POSTURE"
+    }
+  ]
 }

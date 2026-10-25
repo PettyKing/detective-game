@@ -1,3 +1,115 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "outcomes": [
+    {
+      "id": "outcome_001",
+      "category": "STRONG_CASE",
+      "title": "Strong Prosecutable Case",
+      "description": "The investigation identifies the responsible person, establishes the core homicide elements through multiple independent routes, preserves strong corroborating evidence, and avoids material procedural damage.",
+      "prosecutorDecision": "FILE_PRIMARY_HOMICIDE_CHARGE",
+      "trialProjection": "CONVICTION_LIKELY",
+      "finalResolutionCategory": "CONVICTION"
+    },
+    {
+      "id": "outcome_002",
+      "category": "INSUFFICIENT_EVIDENCE",
+      "title": "Insufficient Evidence",
+      "description": "The submitted theory may be plausible, but the investigation does not establish enough of the required offense elements or admissible corroboration to support prosecution.",
+      "prosecutorDecision": "DECLINE_PENDING_FURTHER_INVESTIGATION",
+      "trialProjection": "CASE_NOT_TRIAL_READY",
+      "finalResolutionCategory": "UNSOLVED"
+    },
+    {
+      "id": "outcome_003",
+      "category": "PROCEDURAL_DAMAGE",
+      "title": "Correct Theory, Damaged Case",
+      "description": "The investigation identifies substantial evidence pointing toward the responsible person, but material procedural mistakes weaken or suppress important evidence.",
+      "prosecutorDecision": "REASSESS_AFTER_SUPPRESSION_REVIEW",
+      "trialProjection": "ACQUITTAL_RISK_HIGH",
+      "finalResolutionCategory": "ACQUITTAL"
+    },
+    {
+      "id": "outcome_004",
+      "category": "WRONG_PERSON",
+      "title": "Wrong Primary Suspect",
+      "description": "The submitted case identifies a person who is not canonically responsible for the homicide.",
+      "prosecutorDecision": "DECLINE",
+      "trialProjection": "NO_SUPPORTED_HOMICIDE_PROSECUTION",
+      "finalResolutionCategory": "UNSOLVED"
+    },
+    {
+      "id": "outcome_005",
+      "category": "MISSED_PARTICIPANT",
+      "title": "Incomplete Responsibility Theory",
+      "description": "The submitted theory fails to identify all materially responsible participants in a case where multiple participants exist.",
+      "prosecutorDecision": "REVIEW_REQUIRED",
+      "trialProjection": "INCOMPLETE_CASE",
+      "finalResolutionCategory": "UNSOLVED",
+      "enabledForCase001": false
+    },
+    {
+      "id": "outcome_006",
+      "category": "PROSECUTOR_DECLINES",
+      "title": "Prosecutor Declines Charges",
+      "description": "The investigation contains meaningful suspicion but not enough legally usable evidence to justify filing the primary homicide charge.",
+      "prosecutorDecision": "DECLINE",
+      "trialProjection": "NO_TRIAL",
+      "finalResolutionCategory": "UNSOLVED"
+    },
+    {
+      "id": "outcome_007",
+      "category": "REDUCED_CHARGES",
+      "title": "Reduced Charging Decision",
+      "description": "The evidence supports criminal responsibility but leaves material weaknesses in proof, admissibility, or offense-element support. The prosecutor elects a reduced charging posture.",
+      "prosecutorDecision": "FILE_REDUCED_CHARGE",
+      "trialProjection": "MIXED",
+      "finalResolutionCategory": "CONVICTION"
+    },
+    {
+      "id": "outcome_008",
+      "category": "ACQUITTAL",
+      "title": "Acquittal",
+      "description": "The investigation reaches prosecution, but evidentiary weakness, suppression, or insufficient corroboration prevents proof beyond a reasonable doubt.",
+      "prosecutorDecision": "CASE_PROCEEDED",
+      "trialProjection": "ACQUITTAL",
+      "finalResolutionCategory": "ACQUITTAL"
+    },
+    {
+      "id": "outcome_009",
+      "category": "CONVICTION",
+      "title": "Conviction",
+      "description": "The investigation produces a legally sound and sufficiently corroborated prosecution resulting in conviction.",
+      "prosecutorDecision": "CASE_PROCEEDED",
+      "trialProjection": "CONVICTION",
+      "finalResolutionCategory": "CONVICTION"
+    },
+    {
+      "id": "outcome_010",
+      "category": "UNSOLVED",
+      "title": "Case Remains Unsolved",
+      "description": "The player submits without establishing a sufficiently supported and prosecutable theory.",
+      "prosecutorDecision": "NO_CHARGE",
+      "trialProjection": "NO_TRIAL",
+      "finalResolutionCategory": "UNSOLVED"
+    }
+  ],
+  "resolutionRules": [
+    {
+      "id": "resolution_rule_001",
+      "sourceOutcomeId": "outcome_001",
+      "resolvesToOutcomeId": "outcome_009"
+    },
+    {
+      "id": "resolution_rule_002",
+      "sourceOutcomeId": "outcome_003",
+      "resolvesToOutcomeId": "outcome_008"
+    },
+    {
+      "id": "resolution_rule_003",
+      "sourceOutcomeId": "outcome_007",
+      "resolvesToOutcomeId": "outcome_009"
+    }
+  ]
 }

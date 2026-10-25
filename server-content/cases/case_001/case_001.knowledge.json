@@ -1,3 +1,250 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "characterKnowledge": [
+    {
+      "characterId": "char_001",
+      "knownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_010",
+        "fact_011",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_029",
+        "fact_030"
+      ],
+      "believedFactIds": [],
+      "unknownFactIds": [
+        "fact_007",
+        "fact_008",
+        "fact_009",
+        "fact_012",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_025"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_010",
+        "fact_011",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_029",
+        "fact_030"
+      ]
+    },
+    {
+      "characterId": "char_002",
+      "knownFactIds": [
+        "fact_002",
+        "fact_003",
+        "fact_004",
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_026"
+      ],
+      "believedFactIds": [],
+      "unknownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009",
+        "fact_027",
+        "fact_028"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_026"
+      ]
+    },
+    {
+      "characterId": "char_003",
+      "knownFactIds": [
+        "fact_027",
+        "fact_029"
+      ],
+      "believedFactIds": [],
+      "unknownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009",
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_025"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_027",
+        "fact_029"
+      ]
+    },
+    {
+      "characterId": "char_004",
+      "knownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009"
+      ],
+      "believedFactIds": [],
+      "unknownFactIds": [
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_025"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009"
+      ]
+    },
+    {
+      "characterId": "char_005",
+      "knownFactIds": [
+        "fact_028",
+        "fact_030"
+      ],
+      "believedFactIds": [],
+      "unknownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009",
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_025"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_028",
+        "fact_030"
+      ]
+    },
+    {
+      "characterId": "char_006",
+      "knownFactIds": [
+        "fact_025"
+      ],
+      "believedFactIds": [
+        "fact_025"
+      ],
+      "unknownFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009",
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024"
+      ],
+      "permittedPrivateFactIds": [
+        "fact_025"
+      ]
+    }
+  ],
+  "projectionRules": {
+    "characterMayReceiveOnlyOwnPrivateKnowledge": true,
+    "characterMayReceiveOwnCoverStories": true,
+    "characterMayReceiveOwnMotivations": true,
+    "characterMayReceiveOwnDisclosureBoundaries": true,
+    "characterMayReceiveActivatedBehaviorState": true,
+    "characterMayReceiveGlobalSolution": false,
+    "characterMayReceiveOtherCharactersPrivateKnowledge": false,
+    "characterMayReceiveCanonicalTruthClassification": false,
+    "characterMayInferUnknownCanonicalFactsAsCertain": false
+  }
 }

@@ -1,3 +1,278 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "primaryOffenseId": "offense_001",
+  "offenses": [
+    {
+      "id": "offense_001",
+      "name": "Intentional Homicide",
+      "requiredElements": [
+        {
+          "id": "element_001",
+          "name": "Death",
+          "minimumSupport": 1,
+          "supportingFactIds": [
+            "fact_001",
+            "fact_003",
+            "fact_004"
+          ]
+        },
+        {
+          "id": "element_002",
+          "name": "Criminal Agency",
+          "minimumSupport": 2,
+          "supportingFactIds": [
+            "fact_002",
+            "fact_003",
+            "fact_019"
+          ]
+        },
+        {
+          "id": "element_003",
+          "name": "Identity of Responsible Actor",
+          "minimumSupport": 3,
+          "supportingFactIds": [
+            "fact_012",
+            "fact_015",
+            "fact_016",
+            "fact_021",
+            "fact_022",
+            "fact_023",
+            "fact_024",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "element_004",
+          "name": "Intent or Knowing Use of Deadly Force",
+          "minimumSupport": 2,
+          "supportingFactIds": [
+            "fact_003",
+            "fact_017",
+            "fact_018",
+            "fact_019"
+          ]
+        }
+      ]
+    }
+  ],
+  "essentialSolutionFactIds": [
+    "fact_002",
+    "fact_010",
+    "fact_013",
+    "fact_015",
+    "fact_016",
+    "fact_023",
+    "fact_024"
+  ],
+  "essentialEvidenceIds": [
+    "ev_001",
+    "ev_004",
+    "ev_006",
+    "ev_008"
+  ],
+  "strongCorroborationEvidenceIds": [
+    "ev_009",
+    "ev_010"
+  ],
+  "alternativeSuspectResolutionFactIds": [
+    "fact_009",
+    "fact_027",
+    "fact_028"
+  ],
+  "prosecutorRules": [
+    {
+      "id": "prosecutor_rule_001",
+      "name": "Minimum charging posture",
+      "minimumOffenseElementsSatisfied": 3,
+      "minimumUsableEvidenceCount": 4,
+      "minimumIndependentRouteCount": 2,
+      "disqualifyingConditions": [
+        "WRONG_PRIMARY_SUSPECT"
+      ],
+      "result": "CHARGING_REVIEW_AVAILABLE"
+    },
+    {
+      "id": "prosecutor_rule_002",
+      "name": "Strong charging posture",
+      "minimumOffenseElementsSatisfied": 4,
+      "minimumUsableEvidenceCount": 6,
+      "minimumIndependentRouteCount": 3,
+      "minimumStrongCorroborationCount": 1,
+      "maximumMajorProceduralErrors": 0,
+      "result": "STRONG_CHARGING_POSTURE"
+    },
+    {
+      "id": "prosecutor_rule_003",
+      "name": "Reduced charging posture",
+      "minimumOffenseElementsSatisfied": 3,
+      "minimumUsableEvidenceCount": 4,
+      "minimumIndependentRouteCount": 2,
+      "maximumMajorProceduralErrors": 2,
+      "result": "REDUCED_CHARGING_POSTURE"
+    },
+    {
+      "id": "prosecutor_rule_004",
+      "name": "Declination posture",
+      "minimumOffenseElementsSatisfied": 0,
+      "maximumOffenseElementsSatisfied": 2,
+      "result": "PROSECUTOR_DECLINATION_LIKELY"
+    }
+  ],
+  "evaluationWeights": {
+    "correctPrimarySuspect": 30,
+    "offenseElements": 20,
+    "admissibleEvidenceStrength": 20,
+    "independentInvestigativeRoutes": 10,
+    "alternativeSuspectResolution": 5,
+    "proceduralIntegrity": 10,
+    "caseSubmissionQuality": 5
+  },
+  "proceduralPenalties": [
+    {
+      "id": "penalty_001",
+      "violation": "VEHICLE_SEARCH_WITHOUT_VALID_AUTHORITY",
+      "scorePenalty": 15,
+      "severity": "MAJOR"
+    },
+    {
+      "id": "penalty_002",
+      "violation": "RESIDENCE_SEARCH_WITHOUT_VALID_AUTHORITY",
+      "scorePenalty": 15,
+      "severity": "MAJOR"
+    },
+    {
+      "id": "penalty_003",
+      "violation": "DIGITAL_CONTENT_SEARCH_WITHOUT_AUTHORITY",
+      "scorePenalty": 12,
+      "severity": "MAJOR"
+    },
+    {
+      "id": "penalty_004",
+      "violation": "MATERIAL_FALSE_STATEMENT_IN_WARRANT_APPLICATION",
+      "scorePenalty": 25,
+      "severity": "SEVERE"
+    },
+    {
+      "id": "penalty_005",
+      "violation": "CHAIN_OF_CUSTODY_DEFECT",
+      "scorePenalty": 5,
+      "severity": "MODERATE"
+    },
+    {
+      "id": "penalty_006",
+      "violation": "UNSUPPORTED_ARREST_ATTEMPT",
+      "scorePenalty": 8,
+      "severity": "MODERATE"
+    }
+  ],
+  "independentRouteDefinitions": [
+    {
+      "id": "evaluation_route_001",
+      "name": "Financial motive route",
+      "minimumFactMatches": 3,
+      "factIds": [
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_014"
+      ]
+    },
+    {
+      "id": "evaluation_route_002",
+      "name": "Movement and witness route",
+      "minimumFactMatches": 2,
+      "factIds": [
+        "fact_016",
+        "fact_021",
+        "fact_025"
+      ]
+    },
+    {
+      "id": "evaluation_route_003",
+      "name": "Digital concealment route",
+      "minimumFactMatches": 2,
+      "factIds": [
+        "fact_015",
+        "fact_020",
+        "fact_022",
+        "fact_024"
+      ]
+    },
+    {
+      "id": "evaluation_route_004",
+      "name": "Physical forensic route",
+      "minimumFactMatches": 2,
+      "factIds": [
+        "fact_002",
+        "fact_003",
+        "fact_019",
+        "fact_023"
+      ]
+    }
+  ],
+  "outcomeRules": [
+    {
+      "id": "evaluation_outcome_001",
+      "category": "WRONG_PERSON",
+      "priority": 100,
+      "conditions": {
+        "submittedPrimarySuspectMustEqual": "NOT_char_002"
+      },
+      "outcomeId": "outcome_004"
+    },
+    {
+      "id": "evaluation_outcome_002",
+      "category": "INSUFFICIENT_EVIDENCE",
+      "priority": 90,
+      "conditions": {
+        "maximumOffenseElementsSatisfied": 2
+      },
+      "outcomeId": "outcome_002"
+    },
+    {
+      "id": "evaluation_outcome_003",
+      "category": "PROCEDURAL_DAMAGE",
+      "priority": 85,
+      "conditions": {
+        "minimumMajorProceduralErrors": 2
+      },
+      "outcomeId": "outcome_003"
+    },
+    {
+      "id": "evaluation_outcome_004",
+      "category": "PROSECUTOR_DECLINES",
+      "priority": 80,
+      "conditions": {
+        "maximumUsableEvidenceCount": 3
+      },
+      "outcomeId": "outcome_006"
+    },
+    {
+      "id": "evaluation_outcome_005",
+      "category": "REDUCED_CHARGES",
+      "priority": 70,
+      "conditions": {
+        "minimumOffenseElementsSatisfied": 3,
+        "minimumUsableEvidenceCount": 4
+      },
+      "outcomeId": "outcome_007"
+    },
+    {
+      "id": "evaluation_outcome_006",
+      "category": "STRONG_CASE",
+      "priority": 60,
+      "conditions": {
+        "submittedPrimarySuspectMustEqual": "char_002",
+        "minimumOffenseElementsSatisfied": 4,
+        "minimumUsableEvidenceCount": 6,
+        "minimumIndependentRouteCount": 3,
+        "minimumStrongCorroborationCount": 1,
+        "maximumMajorProceduralErrors": 0
+      },
+      "outcomeId": "outcome_001"
+    }
+  ]
 }

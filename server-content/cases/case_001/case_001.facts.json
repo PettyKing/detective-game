@@ -1,3 +1,869 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "facts": [
+    {
+      "id": "fact_001",
+      "category": "CASE",
+      "value": "Grant Holloway is found deceased inside the detached workshop behind his residence.",
+      "canonicalValue": "Grant Holloway is the homicide victim.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_001"
+      ],
+      "knownByCharacterIds": [],
+      "relatedCharacterIds": [
+        "char_001"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "CASE_FOUNDATION"
+      ]
+    },
+    {
+      "id": "fact_002",
+      "category": "FORENSIC",
+      "value": "The physical scene is not fully consistent with an accidental fall.",
+      "canonicalValue": "Grant's death was caused by an intentional assault and portions of the scene were staged.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_002",
+        "discover_003"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_001"
+      ],
+      "legalTags": [],
+      "evaluationTags": [
+        "HOMICIDE_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_003",
+      "category": "FORENSIC",
+      "value": "Grant suffered injuries inconsistent with a single simple fall.",
+      "canonicalValue": "Grant sustained at least two significant impacts during the assault.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_003"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_001"
+      ],
+      "legalTags": [],
+      "evaluationTags": [
+        "HOMICIDE_SUPPORT",
+        "METHOD_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_004",
+      "category": "FORENSIC",
+      "value": "Grant's fatal injury occurred during a narrow late-evening time window.",
+      "canonicalValue": "The fatal assault occurred approximately between 10:14 PM and 10:18 PM.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_004"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_003"
+      ],
+      "legalTags": [],
+      "evaluationTags": [
+        "TIMELINE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T22:16:00-04:00"
+    },
+    {
+      "id": "fact_005",
+      "category": "TIMELINE",
+      "value": "Caleb Holloway visited Grant on the evening before Grant was found dead.",
+      "canonicalValue": "Caleb arrived at Grant's residence at approximately 8:25 PM.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_005",
+        "discover_006"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_004"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_004"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT"
+      ],
+      "occurredAt": "2026-04-13T20:25:00-04:00"
+    },
+    {
+      "id": "fact_006",
+      "category": "CHARACTER",
+      "value": "Caleb and Grant argued about money.",
+      "canonicalValue": "Caleb asked Grant for money because Caleb had relapsed into gambling and was in financial trouble.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_006",
+        "discover_007"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_004"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_004"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT",
+        "CHARACTER_SECRET"
+      ],
+      "occurredAt": "2026-04-13T20:30:00-04:00"
+    },
+    {
+      "id": "fact_007",
+      "category": "CHARACTER",
+      "value": "Caleb removed cash from Grant's residence without permission.",
+      "canonicalValue": "Caleb stole cash from Grant's desk before leaving.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_007",
+        "discover_008"
+      ],
+      "knownByCharacterIds": [
+        "char_004"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_004"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT",
+        "CHARACTER_SECRET"
+      ],
+      "occurredAt": "2026-04-13T20:45:00-04:00"
+    },
+    {
+      "id": "fact_008",
+      "category": "STATEMENT",
+      "value": "Caleb initially denies visiting Grant that evening.",
+      "canonicalValue": "Caleb knowingly lies about his visit in order to conceal the theft and gambling relapse.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_006",
+        "discover_009"
+      ],
+      "knownByCharacterIds": [
+        "char_004"
+      ],
+      "relatedCharacterIds": [
+        "char_004"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "DECEPTION",
+        "ALTERNATIVE_SUSPECT"
+      ]
+    },
+    {
+      "id": "fact_009",
+      "category": "TIMELINE",
+      "value": "Caleb left well before the fatal assault.",
+      "canonicalValue": "Caleb left Grant's residence at approximately 8:50 PM and was not present during the homicide.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_005",
+        "discover_009"
+      ],
+      "knownByCharacterIds": [
+        "char_004"
+      ],
+      "relatedCharacterIds": [
+        "char_004"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT_EXCLUSION"
+      ],
+      "occurredAt": "2026-04-13T20:50:00-04:00"
+    },
+    {
+      "id": "fact_010",
+      "category": "FINANCIAL",
+      "value": "Company records contain suspicious payments to Northline Fixtures.",
+      "canonicalValue": "Northline Fixtures is a fictitious vendor used to divert money from Hollis & Holloway Custom Homes.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_010",
+        "discover_011"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_002"
+      ],
+      "relatedEvidenceIds": [
+        "ev_006"
+      ],
+      "legalTags": [
+        "MOTIVE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "MOTIVE_SUPPORT",
+        "FINANCIAL_FRAUD"
+      ]
+    },
+    {
+      "id": "fact_011",
+      "category": "FINANCIAL",
+      "value": "Northline Fixtures lacks normal vendor history and supporting business documentation.",
+      "canonicalValue": "The vendor exists only as a mechanism for fraudulent payments.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_010",
+        "discover_011"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_002"
+      ],
+      "relatedEvidenceIds": [
+        "ev_006"
+      ],
+      "legalTags": [
+        "MOTIVE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "MOTIVE_SUPPORT",
+        "FINANCIAL_FRAUD"
+      ]
+    },
+    {
+      "id": "fact_012",
+      "category": "DIGITAL",
+      "value": "Internal system records connect Ashley's credentials or workstation activity to Northline Fixtures.",
+      "canonicalValue": "Ashley created or maintained the fraudulent vendor activity using access available through her legitimate job.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_011",
+        "discover_012"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_002"
+      ],
+      "relatedEvidenceIds": [
+        "ev_007"
+      ],
+      "legalTags": [
+        "MOTIVE_SUPPORT",
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "MOTIVE_SUPPORT",
+        "FINANCIAL_FRAUD"
+      ]
+    },
+    {
+      "id": "fact_013",
+      "category": "MOTIVE",
+      "value": "Grant had discovered evidence of serious financial irregularities before his death.",
+      "canonicalValue": "Grant intended to expose Ashley's fraud and discuss it with the company accountant the following morning.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_013",
+        "discover_014"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_002"
+      ],
+      "relatedEvidenceIds": [
+        "ev_004",
+        "ev_006",
+        "ev_010"
+      ],
+      "legalTags": [
+        "MOTIVE_SUPPORT",
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "MOTIVE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T21:15:00-04:00"
+    },
+    {
+      "id": "fact_014",
+      "category": "DIGITAL",
+      "value": "Grant contacted the company accountant shortly before his death.",
+      "canonicalValue": "At approximately 9:36 PM Grant indicated that he had discovered something serious and wanted to meet the next morning.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_013"
+      ],
+      "knownByCharacterIds": [
+        "char_001"
+      ],
+      "relatedCharacterIds": [
+        "char_001"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [
+        "ev_004"
+      ],
+      "legalTags": [
+        "MOTIVE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "MOTIVE_SUPPORT",
+        "TIMELINE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T21:36:00-04:00"
+    },
+    {
+      "id": "fact_015",
+      "category": "DIGITAL",
+      "value": "Grant and Ashley communicated shortly before the homicide.",
+      "canonicalValue": "At approximately 9:48 PM Grant and Ashley exchanged increasingly tense communications related to Grant's discovery.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_014",
+        "discover_015"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [
+        "ev_004"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "TIMELINE_SUPPORT",
+        "MOTIVE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T21:48:00-04:00"
+    },
+    {
+      "id": "fact_016",
+      "category": "TIMELINE",
+      "value": "Ashley traveled to Grant's residence during the homicide window.",
+      "canonicalValue": "Ashley arrived at Grant's residence at approximately 10:05 PM and entered the workshop at approximately 10:12 PM.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_016",
+        "discover_017",
+        "discover_018"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001",
+        "loc_003"
+      ],
+      "relatedEvidenceIds": [
+        "ev_005",
+        "ev_008"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "OPPORTUNITY_SUPPORT",
+        "TIMELINE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T22:05:00-04:00"
+    },
+    {
+      "id": "fact_017",
+      "category": "HOMICIDE",
+      "value": "Ashley assaulted Grant inside the workshop.",
+      "canonicalValue": "Ashley struck Grant with a framing hammer during their confrontation, causing the injuries that killed him.",
+      "discoverable": false,
+      "discoveryRuleIds": [],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_009"
+      ],
+      "legalTags": [
+        "HOMICIDE_ELEMENT"
+      ],
+      "evaluationTags": [
+        "CANONICAL_RESPONSIBILITY",
+        "METHOD_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T22:16:00-04:00"
+    },
+    {
+      "id": "fact_018",
+      "category": "HOMICIDE",
+      "value": "A framing hammer from the workshop was used during the assault.",
+      "canonicalValue": "The framing hammer was the assault instrument.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_019",
+        "discover_020"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_001",
+        "ev_002"
+      ],
+      "legalTags": [],
+      "evaluationTags": [
+        "METHOD_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_019",
+      "category": "FORENSIC",
+      "value": "The workshop scene was disturbed after Grant was fatally injured.",
+      "canonicalValue": "Ashley altered elements near Grant's body and the ladder in an attempt to create the appearance of an accidental fall.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_002",
+        "discover_003",
+        "discover_019"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_001"
+      ],
+      "legalTags": [
+        "CONCEALMENT_SUPPORT"
+      ],
+      "evaluationTags": [
+        "CONCEALMENT_SUPPORT",
+        "HOMICIDE_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_020",
+      "category": "PROPERTY",
+      "value": "Grant's laptop disappeared from the residence after his death.",
+      "canonicalValue": "Ashley removed Grant's laptop from the workshop because it contained financial evidence.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_021",
+        "discover_022"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001",
+        "loc_003"
+      ],
+      "relatedEvidenceIds": [
+        "ev_010"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT",
+        "WARRANT_SCOPE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "CONCEALMENT_SUPPORT",
+        "MOTIVE_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T22:22:00-04:00"
+    },
+    {
+      "id": "fact_021",
+      "category": "TIMELINE",
+      "value": "Ashley departed Grant's residence shortly after the fatal assault.",
+      "canonicalValue": "Ashley left the property at approximately 10:27 PM.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_016",
+        "discover_018"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_005",
+        "ev_008"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "TIMELINE_SUPPORT",
+        "OPPORTUNITY_SUPPORT"
+      ],
+      "occurredAt": "2026-04-13T22:27:00-04:00"
+    },
+    {
+      "id": "fact_022",
+      "category": "DIGITAL",
+      "value": "Portions of Ashley and Grant's communications were deleted after the homicide.",
+      "canonicalValue": "Ashley deliberately deleted portions of the communications to conceal the conflict and meeting.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_015",
+        "discover_023"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [
+        "ev_004"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT",
+        "CONCEALMENT_SUPPORT"
+      ],
+      "evaluationTags": [
+        "CONCEALMENT_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_023",
+      "category": "FORENSIC",
+      "value": "Grant's biological material is present inside Ashley's SUV.",
+      "canonicalValue": "Grant's blood was transferred into Ashley's SUV after the homicide and remained despite Ashley's cleaning attempt.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_024",
+        "discover_025"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_003"
+      ],
+      "relatedEvidenceIds": [
+        "ev_009"
+      ],
+      "legalTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "STRONG_PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "PHYSICAL_CORROBORATION",
+        "STRONG_CASE_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_024",
+      "category": "PROPERTY",
+      "value": "Grant's missing laptop is located within Ashley's control.",
+      "canonicalValue": "Ashley retained Grant's laptop after removing it from the workshop.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_022",
+        "discover_026"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedLocationIds": [
+        "loc_003"
+      ],
+      "relatedEvidenceIds": [
+        "ev_010"
+      ],
+      "legalTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "STRONG_PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "PROPERTY_CORROBORATION",
+        "CONCEALMENT_SUPPORT",
+        "STRONG_CASE_SUPPORT"
+      ]
+    },
+    {
+      "id": "fact_025",
+      "category": "WITNESS",
+      "value": "Nora Bell observed a dark SUV near Grant's property during the relevant period.",
+      "canonicalValue": "Nora observed Ashley's dark blue SUV, but nighttime conditions caused Nora to initially describe it as black.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_017"
+      ],
+      "knownByCharacterIds": [
+        "char_006"
+      ],
+      "relatedCharacterIds": [
+        "char_002",
+        "char_006"
+      ],
+      "relatedLocationIds": [
+        "loc_001"
+      ],
+      "relatedEvidenceIds": [
+        "ev_005"
+      ],
+      "legalTags": [
+        "PROBABLE_CAUSE_SUPPORT"
+      ],
+      "evaluationTags": [
+        "WITNESS_CORROBORATION"
+      ]
+    },
+    {
+      "id": "fact_026",
+      "category": "CHARACTER",
+      "value": "Ashley routinely wears opaque cosmetic contact lenses in different colors.",
+      "canonicalValue": "Ashley's natural eye color is dark brown, but most acquaintances have seen her wearing gray, blue-gray, green, or pale hazel cosmetic contacts.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_027"
+      ],
+      "knownByCharacterIds": [
+        "char_002"
+      ],
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "CHARACTER_DETAIL",
+        "EYEWITNESS_VARIANCE"
+      ]
+    },
+    {
+      "id": "fact_027",
+      "category": "ALIBI",
+      "value": "Leah Holloway's movements during the homicide window can be independently corroborated.",
+      "canonicalValue": "Leah was not present at Grant's residence during the fatal assault.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_028"
+      ],
+      "knownByCharacterIds": [
+        "char_003"
+      ],
+      "relatedCharacterIds": [
+        "char_003"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT_EXCLUSION"
+      ]
+    },
+    {
+      "id": "fact_028",
+      "category": "ALIBI",
+      "value": "Isaac Reed's whereabouts during the homicide window can be independently corroborated.",
+      "canonicalValue": "Isaac was at the independent alibi location during the fatal assault.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_029",
+        "discover_030"
+      ],
+      "knownByCharacterIds": [
+        "char_005"
+      ],
+      "relatedCharacterIds": [
+        "char_005"
+      ],
+      "relatedLocationIds": [
+        "loc_004"
+      ],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT_EXCLUSION"
+      ]
+    },
+    {
+      "id": "fact_029",
+      "category": "CHARACTER",
+      "value": "Leah and Grant had recently exchanged angry communications concerning their separation and finances.",
+      "canonicalValue": "Leah had genuine conflict with Grant but no involvement in his death.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_031"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_003"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_003"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT"
+      ]
+    },
+    {
+      "id": "fact_030",
+      "category": "CHARACTER",
+      "value": "Isaac Reed sent Grant a threatening message after being fired.",
+      "canonicalValue": "Isaac was angry and made a genuine threat but did not act on it and did not kill Grant.",
+      "discoverable": true,
+      "discoveryRuleIds": [
+        "discover_032"
+      ],
+      "knownByCharacterIds": [
+        "char_001",
+        "char_005"
+      ],
+      "relatedCharacterIds": [
+        "char_001",
+        "char_005"
+      ],
+      "relatedLocationIds": [],
+      "relatedEvidenceIds": [],
+      "legalTags": [],
+      "evaluationTags": [
+        "ALTERNATIVE_SUSPECT"
+      ]
+    }
+  ]
 }

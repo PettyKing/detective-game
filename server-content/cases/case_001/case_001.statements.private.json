@@ -1,3 +1,447 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "statements": [
+    {
+      "id": "statement_001",
+      "characterId": "char_002",
+      "topic": "Relationship with Grant",
+      "statementText": "Grant could be difficult, especially when he thought somebody had made a mistake, but we worked together for years. I respected him.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_013"
+      ],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_002",
+      "characterId": "char_002",
+      "topic": "Northline Fixtures",
+      "statementText": "Northline sounds familiar, but I handle a lot of vendors. I couldn't tell you from memory who originally set that one up.",
+      "truthClassification": "FALSE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_010",
+        "fact_011",
+        "fact_012"
+      ],
+      "relatedEvidenceIds": [
+        "ev_006",
+        "ev_007"
+      ],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Northline Fixtures"
+      },
+      "replacedByStatementId": "statement_003",
+      "retractable": true
+    },
+    {
+      "id": "statement_003",
+      "characterId": "char_002",
+      "topic": "Northline Fixtures after metadata confrontation",
+      "statementText": "My credentials showing up doesn't prove I created anything fraudulent. Vendor records were part of my job. I touched hundreds of them.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "EVASION",
+      "supportingFactIds": [
+        "fact_012"
+      ],
+      "conflictingFactIds": [
+        "fact_010",
+        "fact_011",
+        "fact_012"
+      ],
+      "relatedEvidenceIds": [
+        "ev_006",
+        "ev_007"
+      ],
+      "activation": {
+        "type": "EVIDENCE_PRESENTED",
+        "evidenceIds": [
+          "ev_007"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_004",
+      "characterId": "char_002",
+      "topic": "Contact with Grant",
+      "statementText": "Grant and I exchanged a few work messages that night. That's not unusual. We had projects going constantly.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [
+        "fact_015"
+      ],
+      "conflictingFactIds": [
+        "fact_013",
+        "fact_015"
+      ],
+      "relatedEvidenceIds": [
+        "ev_004"
+      ],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_005",
+      "characterId": "char_002",
+      "topic": "Visit to Grant's residence",
+      "statementText": "No. I didn't go to Grant's house that night.",
+      "truthClassification": "FALSE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_016",
+        "fact_021",
+        "fact_025"
+      ],
+      "relatedEvidenceIds": [
+        "ev_005",
+        "ev_008"
+      ],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Presence at Grant's residence"
+      },
+      "replacedByStatementId": "statement_006",
+      "retractable": true
+    },
+    {
+      "id": "statement_006",
+      "characterId": "char_002",
+      "topic": "Presence after movement evidence",
+      "statementText": "Location data isn't perfect. I drive all over Riverton County for work. Being somewhere in the area doesn't mean I was at Grant's house.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "EVASION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_016",
+        "fact_021"
+      ],
+      "relatedEvidenceIds": [
+        "ev_005",
+        "ev_008"
+      ],
+      "activation": {
+        "type": "EVIDENCE_PRESENTED",
+        "evidenceIds": [
+          "ev_008"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_007",
+      "characterId": "char_002",
+      "topic": "Deleted messages",
+      "statementText": "I delete old messages all the time. If something is missing, that's probably all it is.",
+      "truthClassification": "FALSE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_022"
+      ],
+      "relatedEvidenceIds": [
+        "ev_004"
+      ],
+      "activation": {
+        "type": "EVIDENCE_PRESENTED",
+        "evidenceIds": [
+          "ev_004"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_008",
+      "characterId": "char_002",
+      "topic": "Grant's laptop",
+      "statementText": "I have no idea where Grant's laptop is. He carried that thing everywhere.",
+      "truthClassification": "FALSE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_020",
+        "fact_024"
+      ],
+      "relatedEvidenceIds": [
+        "ev_010"
+      ],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Missing laptop"
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_009",
+      "characterId": "char_002",
+      "topic": "Vehicle trace evidence",
+      "statementText": "Grant and I worked around the same sites and equipment. I've hauled company materials in that SUV plenty of times. Trace material could come from anywhere.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "EVASION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_023"
+      ],
+      "relatedEvidenceIds": [
+        "ev_009"
+      ],
+      "activation": {
+        "type": "EVIDENCE_PRESENTED",
+        "evidenceIds": [
+          "ev_009"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": true
+    },
+    {
+      "id": "statement_010",
+      "characterId": "char_002",
+      "topic": "Eye color",
+      "statementText": "They're contacts. I change colors all the time. Half the people I know probably couldn't tell you what color my actual eyes are.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_026"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Eye color or cosmetic contacts"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_011",
+      "characterId": "char_003",
+      "topic": "Marriage conflict",
+      "statementText": "Grant and I were separating. Yes, we fought about money. Yes, some of the messages were ugly. That doesn't mean I killed him.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_029"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_012",
+      "characterId": "char_003",
+      "topic": "Leah alibi",
+      "statementText": "I wasn't at Grant's house that night. You can verify where I was.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_027"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Whereabouts"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_013",
+      "characterId": "char_004",
+      "topic": "Caleb evening visit",
+      "statementText": "I didn't see Grant that night.",
+      "truthClassification": "FALSE",
+      "intent": "KNOWING_DECEPTION",
+      "supportingFactIds": [],
+      "conflictingFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_009"
+      ],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": "statement_014",
+      "retractable": true
+    },
+    {
+      "id": "statement_014",
+      "characterId": "char_004",
+      "topic": "Caleb admits visit",
+      "statementText": "Fine. I went over there. We argued about money and I left. I lied because I knew how it would look.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "EVASION",
+      "supportingFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_009"
+      ],
+      "conflictingFactIds": [
+        "fact_007"
+      ],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "FACT_CONFRONTATION",
+        "factIds": [
+          "fact_005"
+        ]
+      },
+      "replacedByStatementId": "statement_015",
+      "retractable": true
+    },
+    {
+      "id": "statement_015",
+      "characterId": "char_004",
+      "topic": "Caleb admits theft",
+      "statementText": "I took the cash. Grant wouldn't give me anything and I was desperate. I know how bad that sounds, but he was alive when I left.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_006",
+        "fact_007",
+        "fact_009"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "STRONG_PRESSURE_OR_CORROBORATION",
+        "factIds": [
+          "fact_005",
+          "fact_006",
+          "fact_007"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_016",
+      "characterId": "char_005",
+      "topic": "Threat to Grant",
+      "statementText": "Yeah, I sent it. I was furious. I wanted him to know I thought he'd screwed me over. I didn't go kill him.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_030"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Threatening message"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_017",
+      "characterId": "char_005",
+      "topic": "Isaac alibi",
+      "statementText": "I was at the bar. Check the cameras, the receipt, the bartender, whatever you want.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_028"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_018",
+      "characterId": "char_006",
+      "topic": "SUV observation",
+      "statementText": "I saw a dark SUV near Grant's place. I thought it was black, but it was nighttime and I wouldn't swear to the exact color.",
+      "truthClassification": "PARTIALLY_TRUE",
+      "intent": "MISTAKEN_BELIEF",
+      "supportingFactIds": [
+        "fact_025"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [
+        "ev_005"
+      ],
+      "activation": {
+        "type": "AVAILABLE_FROM_INITIAL_INTERVIEW"
+      },
+      "replacedByStatementId": "statement_019",
+      "retractable": true
+    },
+    {
+      "id": "statement_019",
+      "characterId": "char_006",
+      "topic": "SUV color after comparison",
+      "statementText": "That dark blue could absolutely have looked black from my window. I can say the shape looks similar, but I don't want to pretend I saw details I didn't.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_025"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [
+        "ev_005",
+        "ev_008"
+      ],
+      "activation": {
+        "type": "EVIDENCE_PRESENTED",
+        "evidenceIds": [
+          "ev_008"
+        ]
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    },
+    {
+      "id": "statement_020",
+      "characterId": "char_006",
+      "topic": "Timing",
+      "statementText": "It was late. I remember hearing voices and noticing the SUV sometime after ten, but I didn't check a clock right then.",
+      "truthClassification": "TRUE",
+      "intent": "TRUTHFUL_DISCLOSURE",
+      "supportingFactIds": [
+        "fact_016",
+        "fact_025"
+      ],
+      "conflictingFactIds": [],
+      "relatedEvidenceIds": [
+        "ev_005"
+      ],
+      "activation": {
+        "type": "TOPIC_RAISED",
+        "topic": "Timing"
+      },
+      "replacedByStatementId": null,
+      "retractable": false
+    }
+  ]
 }

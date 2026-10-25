@@ -1,3 +1,169 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "checkpoints": [
+    {
+      "id": "checkpoint_001",
+      "code": "START",
+      "order": 1,
+      "name": "Investigation Assigned",
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "requiredEventTypes": [
+        "CASE_STARTED"
+      ],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_002",
+      "code": "INITIAL_INTERVIEWS_COMPLETE",
+      "order": 2,
+      "name": "Initial Interviews Completed",
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "requiredInterviewCharacterIds": [
+        "char_002",
+        "char_003",
+        "char_004",
+        "char_005",
+        "char_006"
+      ],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_003",
+      "code": "EVIDENCE_DISCOVERED",
+      "order": 3,
+      "name": "Core Evidence Developed",
+      "requiredFactIds": [
+        "fact_002"
+      ],
+      "minimumDiscoveredEvidenceCount": 4,
+      "requiredEvidenceIds": [
+        "ev_001"
+      ],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_004",
+      "code": "FORENSICS_READY",
+      "order": 4,
+      "name": "Forensic Investigation Developed",
+      "requiredFactIds": [
+        "fact_004"
+      ],
+      "minimumCompletedForensicTestCount": 2,
+      "requiredEvidenceIds": [],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_005",
+      "code": "WARRANT_READY",
+      "order": 5,
+      "name": "Search Warrant Basis Available",
+      "requiredFactIds": [
+        "fact_002"
+      ],
+      "minimumKnownFactsFromGroups": [
+        {
+          "id": "checkpoint_group_001",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_016",
+            "fact_021",
+            "fact_025"
+          ]
+        },
+        {
+          "id": "checkpoint_group_002",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_012",
+            "fact_013",
+            "fact_015",
+            "fact_022"
+          ]
+        }
+      ],
+      "requiredEvidenceIds": [],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_006",
+      "code": "WARRANT_APPROVED",
+      "order": 6,
+      "name": "Search Authority Approved",
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "requiredEventTypes": [
+        "WARRANT_APPROVED"
+      ],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_007",
+      "code": "PRE_ARREST",
+      "order": 7,
+      "name": "Arrest Decision Point",
+      "requiredFactIds": [
+        "fact_002",
+        "fact_016"
+      ],
+      "minimumKnownFactsFromGroups": [
+        {
+          "id": "checkpoint_group_003",
+          "minimumMatches": 1,
+          "factIds": [
+            "fact_023",
+            "fact_024"
+          ]
+        },
+        {
+          "id": "checkpoint_group_004",
+          "minimumMatches": 2,
+          "factIds": [
+            "fact_010",
+            "fact_012",
+            "fact_013",
+            "fact_015",
+            "fact_022"
+          ]
+        }
+      ],
+      "requiredEvidenceIds": [],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_008",
+      "code": "PROSECUTOR_REVIEW",
+      "order": 8,
+      "name": "Prosecutor Review Available",
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "minimumDiscoveredEvidenceCount": 4,
+      "minimumCompletedForensicTestCount": 2,
+      "requiredEventTypes": [],
+      "playerVisible": false
+    },
+    {
+      "id": "checkpoint_009",
+      "code": "RESOLUTION",
+      "order": 9,
+      "name": "Case Submitted",
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "requiredEventTypes": [
+        "CASE_SUBMITTED"
+      ],
+      "playerVisible": false
+    }
+  ],
+  "checkpointPolicy": {
+    "checkpointsAreSequential": false,
+    "playerMustReachAllBeforeSubmission": false,
+    "submissionAvailableAtAnyTime": true,
+    "missingCheckpointMayReduceOutcomeQuality": true,
+    "checkpointStateIsServerAuthoritative": true
+  }
 }

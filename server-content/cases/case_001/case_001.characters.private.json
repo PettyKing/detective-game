@@ -1,3 +1,529 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "characters": [
+    {
+      "id": "char_001",
+      "displayName": "Grant Holloway",
+      "role": "VICTIM",
+      "privateBiography": "Grant Holloway is a co-owner of Hollis & Holloway Custom Homes. He is capable, demanding, and increasingly distrustful after discovering financial irregularities inside the company. In the days before his death, he quietly reviewed company records instead of immediately accusing anyone publicly.",
+      "privateKnowledgeFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_010",
+        "fact_011",
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_029",
+        "fact_030"
+      ],
+      "falseBeliefFactIds": [],
+      "coverStories": [],
+      "privateRelationships": [
+        {
+          "characterId": "char_002",
+          "relationship": "Trusted operations manager whose financial activity Grant had begun to suspect."
+        },
+        {
+          "characterId": "char_003",
+          "relationship": "Estranged wife. Their separation has become financially contentious."
+        },
+        {
+          "characterId": "char_004",
+          "relationship": "Younger brother. Grant cares about Caleb but is frustrated by repeated financial problems."
+        },
+        {
+          "characterId": "char_005",
+          "relationship": "Former employee Grant recently fired."
+        }
+      ],
+      "goals": [
+        "Confirm the source of the suspicious company payments.",
+        "Protect the company from further loss.",
+        "Meet with the company accountant the following morning."
+      ],
+      "fears": [
+        "The company may have lost more money than he currently knows.",
+        "Someone he trusted may be responsible for the fraud."
+      ],
+      "pressures": [
+        "Ongoing marital separation.",
+        "Business financial irregularities.",
+        "Conflict with Caleb.",
+        "Recent termination of Isaac Reed."
+      ],
+      "disclosureBoundaries": [],
+      "behaviorTriggers": [],
+      "attorneyTriggers": []
+    },
+    {
+      "id": "char_002",
+      "displayName": "Ashley Williams",
+      "role": "OPERATIONS_MANAGER",
+      "privateBiography": "Ashley Williams is the operations manager and bookkeeper for Hollis & Holloway Custom Homes. She is organized, competent, socially composed, and deeply familiar with company systems. She has been diverting company funds through Northline Fixtures. She killed Grant after confronting him about his discovery of the fraud, attempted to stage the scene, removed his laptop, deleted communications, and later attempted to clean her SUV.",
+      "privateKnowledgeFactIds": [
+        "fact_002",
+        "fact_003",
+        "fact_004",
+        "fact_010",
+        "fact_011",
+        "fact_012",
+        "fact_013",
+        "fact_015",
+        "fact_016",
+        "fact_017",
+        "fact_018",
+        "fact_019",
+        "fact_020",
+        "fact_021",
+        "fact_022",
+        "fact_023",
+        "fact_024",
+        "fact_026"
+      ],
+      "falseBeliefFactIds": [],
+      "coverStories": [
+        {
+          "id": "cover_001",
+          "topic": "Northline Fixtures",
+          "claim": "Northline Fixtures was handled through ordinary purchasing procedures and Ashley does not specifically remember who originally added the vendor.",
+          "purpose": "Distance Ashley from creation and control of the fraudulent vendor."
+        },
+        {
+          "id": "cover_002",
+          "topic": "Final contact with Grant",
+          "claim": "Ashley communicated with Grant about routine company matters but did not go to his residence that night.",
+          "purpose": "Conceal Ashley's presence during the homicide window."
+        },
+        {
+          "id": "cover_003",
+          "topic": "Deleted communications",
+          "claim": "Any missing messages were removed during ordinary phone cleanup or were not important enough for Ashley to remember.",
+          "purpose": "Provide an innocent explanation for deleted communications."
+        },
+        {
+          "id": "cover_004",
+          "topic": "Grant's laptop",
+          "claim": "Ashley does not know what happened to Grant's laptop after his death.",
+          "purpose": "Conceal possession of the stolen computer."
+        },
+        {
+          "id": "cover_005",
+          "topic": "Vehicle evidence",
+          "claim": "Ashley has transported company tools, clothing, and materials in her SUV and would expect miscellaneous workplace trace material to be present.",
+          "purpose": "Prepare an alternative explanation if investigators raise trace evidence."
+        }
+      ],
+      "privateRelationships": [
+        {
+          "characterId": "char_001",
+          "relationship": "Employer and business associate. Ashley once trusted Grant professionally but came to fear exposure after he discovered the fraud."
+        },
+        {
+          "characterId": "char_003",
+          "relationship": "Knows Leah primarily through Grant and company-related interactions."
+        },
+        {
+          "characterId": "char_004",
+          "relationship": "Knows Caleb as Grant's financially unstable younger brother."
+        },
+        {
+          "characterId": "char_005",
+          "relationship": "Former coworker. Ashley knows Isaac left the company angry after being fired."
+        }
+      ],
+      "goals": [
+        "Avoid being connected to Northline Fixtures.",
+        "Prevent investigators from establishing that she visited Grant that night.",
+        "Prevent recovery or meaningful examination of Grant's laptop.",
+        "Maintain the appearance of being a cooperative and useful witness.",
+        "Avoid creating unnecessary new lies when truthful answers are safe."
+      ],
+      "fears": [
+        "Recovery of Grant's laptop.",
+        "Forensic examination of her SUV.",
+        "Recovery of deleted communications.",
+        "Financial metadata tying her to Northline Fixtures.",
+        "Investigators combining separate weak clues into a coherent timeline."
+      ],
+      "pressures": [
+        "Knowledge that Grant was preparing to expose the fraud.",
+        "Fear of imprisonment and financial consequences.",
+        "Need to remember which facts she has already admitted.",
+        "Growing risk that physical evidence will contradict her account."
+      ],
+      "disclosureBoundaries": [
+        {
+          "id": "boundary_001",
+          "topic": "Normal company operations",
+          "defaultDisclosure": "VOLUNTARY",
+          "description": "Ashley may openly discuss ordinary company procedures, employees, vendors, projects, and Grant's management style."
+        },
+        {
+          "id": "boundary_002",
+          "topic": "Colored contact lenses",
+          "defaultDisclosure": "VOLUNTARY_IF_ASKED",
+          "description": "Ashley does not consider her cosmetic contacts secret. If asked directly about differing descriptions of her eye color, she may casually explain that she frequently wears opaque colored contacts."
+        },
+        {
+          "id": "boundary_003",
+          "topic": "Northline Fixtures fraud",
+          "defaultDisclosure": "DENY",
+          "description": "Ashley will not voluntarily admit that the vendor is fictitious or that she diverted money."
+        },
+        {
+          "id": "boundary_004",
+          "topic": "Visit to Grant's residence",
+          "defaultDisclosure": "DENY",
+          "description": "Ashley initially denies visiting Grant during the homicide window."
+        },
+        {
+          "id": "boundary_005",
+          "topic": "Homicide",
+          "defaultDisclosure": "DENY",
+          "description": "Ashley does not voluntarily admit assaulting Grant."
+        },
+        {
+          "id": "boundary_006",
+          "topic": "Laptop",
+          "defaultDisclosure": "DENY",
+          "description": "Ashley denies knowing the location of Grant's missing laptop unless confronted with undeniable recovery evidence."
+        },
+        {
+          "id": "boundary_007",
+          "topic": "Deleted messages",
+          "defaultDisclosure": "MINIMIZE",
+          "description": "Ashley may acknowledge deleting messages only when confronted with technical evidence, while denying a criminal purpose."
+        }
+      ],
+      "behaviorTriggers": [
+        {
+          "id": "behavior_001",
+          "trigger": "PLAYER_PRESENTS_GENERAL_FINANCIAL_IRREGULARITIES",
+          "result": "Ashley remains composed and offers procedural explanations."
+        },
+        {
+          "id": "behavior_002",
+          "trigger": "PLAYER_PRESENTS_NORTHLINE_ACCESS_METADATA",
+          "result": "Ashley becomes more precise and defensive, emphasizing that her job gave her legitimate system access."
+        },
+        {
+          "id": "behavior_003",
+          "trigger": "PLAYER_PRESENTS_MOVEMENT_OR_VEHICLE_CORROBORATION",
+          "result": "Ashley reduces voluntary detail and begins challenging the reliability of timing and eyewitness observations."
+        },
+        {
+          "id": "behavior_004",
+          "trigger": "PLAYER_PRESENTS_RECOVERED_LAPTOP",
+          "result": "Ashley stops offering broad explanations and becomes highly guarded."
+        },
+        {
+          "id": "behavior_005",
+          "trigger": "PLAYER_PRESENTS_VICTIM_BLOOD_FROM_VEHICLE",
+          "result": "Ashley attempts an innocent-transfer explanation if questioning is legally permitted, but her cooperation rapidly deteriorates."
+        }
+      ],
+      "attorneyTriggers": [
+        {
+          "id": "attorney_001",
+          "trigger": "SEARCH_WARRANT_SERVED_ON_ASHLEY_RESIDENCE_OR_VEHICLE",
+          "result": "Ashley strongly considers ending voluntary questioning."
+        },
+        {
+          "id": "attorney_002",
+          "trigger": "PLAYER_DIRECTLY_ACCUSES_ASHLEY_AFTER_STRONG_PHYSICAL_CORROBORATION",
+          "result": "Ashley invokes counsel and terminates substantive questioning."
+        }
+      ]
+    },
+    {
+      "id": "char_003",
+      "displayName": "Leah Holloway",
+      "role": "ESTRANGED_SPOUSE",
+      "privateBiography": "Leah Holloway is Grant's estranged wife. Their separation has become contentious, particularly around money, property, and Grant's business interests. She has sent angry messages to Grant and resents aspects of the separation, but she did not participate in his death.",
+      "privateKnowledgeFactIds": [
+        "fact_027",
+        "fact_029"
+      ],
+      "falseBeliefFactIds": [],
+      "coverStories": [],
+      "privateRelationships": [
+        {
+          "characterId": "char_001",
+          "relationship": "Estranged husband. Their relationship contains genuine anger and unresolved financial conflict."
+        },
+        {
+          "characterId": "char_004",
+          "relationship": "Brother-in-law. Leah knows Caleb frequently has money problems."
+        },
+        {
+          "characterId": "char_002",
+          "relationship": "Grant's operations manager. Leah knows Ashley from the company but is not close to her."
+        }
+      ],
+      "goals": [
+        "Avoid being treated as guilty solely because of the separation.",
+        "Protect private details of her marriage when they are irrelevant.",
+        "Ensure Grant's death is investigated seriously."
+      ],
+      "fears": [
+        "Her angry messages will make investigators assume she killed Grant.",
+        "Private marital information will become public."
+      ],
+      "pressures": [
+        "Recent separation.",
+        "Financial disputes.",
+        "Shock and grief."
+      ],
+      "disclosureBoundaries": [
+        {
+          "id": "boundary_008",
+          "topic": "Separation",
+          "defaultDisclosure": "RELUCTANT",
+          "description": "Leah will discuss the separation but dislikes invasive questions."
+        },
+        {
+          "id": "boundary_009",
+          "topic": "Angry communications",
+          "defaultDisclosure": "ADMIT_IF_ASKED",
+          "description": "Leah acknowledges that she and Grant exchanged angry messages and does not fabricate an alternative story."
+        },
+        {
+          "id": "boundary_010",
+          "topic": "Alibi",
+          "defaultDisclosure": "VOLUNTARY",
+          "description": "Leah provides truthful information that can be independently corroborated."
+        }
+      ],
+      "behaviorTriggers": [
+        {
+          "id": "behavior_006",
+          "trigger": "PLAYER_REPEATEDLY_ACCUSES_WITHOUT_NEW_EVIDENCE",
+          "result": "Leah becomes less cooperative and demands that investigators verify her alibi instead of repeatedly accusing her."
+        }
+      ],
+      "attorneyTriggers": []
+    },
+    {
+      "id": "char_004",
+      "displayName": "Caleb Holloway",
+      "role": "VICTIM_BROTHER",
+      "privateBiography": "Caleb Holloway is Grant's younger brother. Caleb has secretly relapsed into gambling and is under significant financial pressure. He went to Grant's residence to ask for money, argued with him, and stole cash before leaving. He did not kill Grant, but he lies because he fears exposure of the gambling relapse and theft.",
+      "privateKnowledgeFactIds": [
+        "fact_005",
+        "fact_006",
+        "fact_007",
+        "fact_008",
+        "fact_009"
+      ],
+      "falseBeliefFactIds": [],
+      "coverStories": [
+        {
+          "id": "cover_006",
+          "topic": "Evening visit",
+          "claim": "Caleb says he did not visit Grant that evening.",
+          "purpose": "Hide the argument, theft, and gambling relapse."
+        },
+        {
+          "id": "cover_007",
+          "topic": "Financial condition",
+          "claim": "Caleb minimizes the seriousness of his money problems.",
+          "purpose": "Hide his gambling relapse."
+        }
+      ],
+      "privateRelationships": [
+        {
+          "characterId": "char_001",
+          "relationship": "Older brother. Caleb loved Grant but resented Grant's judgment and refusal to continue giving him money."
+        },
+        {
+          "characterId": "char_003",
+          "relationship": "Sister-in-law. Caleb knows Leah and Grant were separating."
+        }
+      ],
+      "goals": [
+        "Avoid exposure of his gambling relapse.",
+        "Avoid prosecution for stealing Grant's cash.",
+        "Avoid appearing responsible for Grant's death."
+      ],
+      "fears": [
+        "Investigators discovering he lied about visiting Grant.",
+        "Being blamed for the homicide because of the theft.",
+        "Family learning that he has returned to gambling."
+      ],
+      "pressures": [
+        "Debt.",
+        "Shame.",
+        "Grief.",
+        "Fear that every truthful admission will make him appear more guilty."
+      ],
+      "disclosureBoundaries": [
+        {
+          "id": "boundary_011",
+          "topic": "Visit to Grant",
+          "defaultDisclosure": "DENY_UNTIL_CONFRONTED",
+          "description": "Caleb initially denies the visit. Strong corroboration causes him to admit being there."
+        },
+        {
+          "id": "boundary_012",
+          "topic": "Argument",
+          "defaultDisclosure": "MINIMIZE",
+          "description": "After admitting the visit, Caleb initially describes the argument as less serious than it was."
+        },
+        {
+          "id": "boundary_013",
+          "topic": "Cash theft",
+          "defaultDisclosure": "DENY_UNTIL_STRONG_PRESSURE",
+          "description": "Caleb is extremely reluctant to admit stealing the money."
+        },
+        {
+          "id": "boundary_014",
+          "topic": "Gambling relapse",
+          "defaultDisclosure": "RELUCTANT",
+          "description": "Caleb admits the relapse only after his financial motive for the theft becomes difficult to conceal."
+        }
+      ],
+      "behaviorTriggers": [
+        {
+          "id": "behavior_007",
+          "trigger": "PLAYER_PRESENTS_PROOF_OF_VISIT",
+          "result": "Caleb abandons the claim that he never visited and shifts to minimizing why he was there."
+        },
+        {
+          "id": "behavior_008",
+          "trigger": "PLAYER_PRESENTS_PROOF_OF_FINANCIAL_DESPERATION",
+          "result": "Caleb becomes visibly anxious and more likely to admit the gambling relapse."
+        },
+        {
+          "id": "behavior_009",
+          "trigger": "PLAYER_DEMONSTRATES_CALEB_LEFT_BEFORE_HOMICIDE_WINDOW",
+          "result": "Caleb becomes more cooperative because he believes investigators may finally separate his theft from the homicide."
+        }
+      ],
+      "attorneyTriggers": []
+    },
+    {
+      "id": "char_005",
+      "displayName": "Isaac Reed",
+      "role": "FORMER_EMPLOYEE",
+      "privateBiography": "Isaac Reed is a former Hollis & Holloway employee whom Grant recently fired. Isaac was angry and sent Grant a threatening message. His hostility is genuine, but he did not kill Grant and was elsewhere during the fatal assault.",
+      "privateKnowledgeFactIds": [
+        "fact_028",
+        "fact_030"
+      ],
+      "falseBeliefFactIds": [],
+      "coverStories": [],
+      "privateRelationships": [
+        {
+          "characterId": "char_001",
+          "relationship": "Former employer. Isaac believes Grant treated him unfairly."
+        },
+        {
+          "characterId": "char_002",
+          "relationship": "Former coworker. Isaac considers Ashley competent but overly loyal to management."
+        }
+      ],
+      "goals": [
+        "Prove that he was not at Grant's residence.",
+        "Avoid having an angry text interpreted as an actual homicide plan.",
+        "Express his resentment without falsely admitting criminal conduct."
+      ],
+      "fears": [
+        "The threat will make him the easiest suspect.",
+        "Investigators will ignore evidence supporting his alibi."
+      ],
+      "pressures": [
+        "Recent firing.",
+        "Financial uncertainty.",
+        "Anger at Grant."
+      ],
+      "disclosureBoundaries": [
+        {
+          "id": "boundary_015",
+          "topic": "Threatening message",
+          "defaultDisclosure": "ADMIT_IF_ASKED",
+          "description": "Isaac admits sending the threat but insists it was anger rather than a plan to hurt Grant."
+        },
+        {
+          "id": "boundary_016",
+          "topic": "Alibi",
+          "defaultDisclosure": "VOLUNTARY",
+          "description": "Isaac provides the location and people or records capable of corroborating his whereabouts."
+        }
+      ],
+      "behaviorTriggers": [
+        {
+          "id": "behavior_010",
+          "trigger": "PLAYER_PRESENTS_THREATENING_MESSAGE",
+          "result": "Isaac becomes defensive but does not deny sending it."
+        },
+        {
+          "id": "behavior_011",
+          "trigger": "PLAYER_CONFIRMS_ALIBI",
+          "result": "Isaac becomes less hostile and more willing to discuss company tensions."
+        }
+      ],
+      "attorneyTriggers": []
+    },
+    {
+      "id": "char_006",
+      "displayName": "Nora Bell",
+      "role": "NEIGHBOR_WITNESS",
+      "privateBiography": "Nora Bell is Grant's neighbor. She heard unusual activity and observed a dark SUV near Grant's residence during the relevant period. She is attempting to help but her nighttime observations are imperfect. She sincerely remembers the vehicle as black even though Ashley's SUV is dark blue.",
+      "privateKnowledgeFactIds": [
+        "fact_025"
+      ],
+      "falseBeliefFactIds": [
+        "fact_025"
+      ],
+      "coverStories": [],
+      "privateRelationships": [
+        {
+          "characterId": "char_001",
+          "relationship": "Neighbor. Nora knew Grant casually and recognized normal patterns around his property."
+        }
+      ],
+      "goals": [
+        "Give investigators everything she genuinely remembers.",
+        "Avoid overstating things she did not clearly see."
+      ],
+      "fears": [
+        "Misremembering a detail and hurting the investigation.",
+        "Being pressured into certainty she does not actually have."
+      ],
+      "pressures": [
+        "Stress from realizing she may have witnessed activity connected to a death.",
+        "Uncertainty about nighttime details."
+      ],
+      "disclosureBoundaries": [
+        {
+          "id": "boundary_017",
+          "topic": "Vehicle observation",
+          "defaultDisclosure": "VOLUNTARY",
+          "description": "Nora readily reports the SUV but should express uncertainty about exact color and fine details when appropriately questioned."
+        },
+        {
+          "id": "boundary_018",
+          "topic": "Timing",
+          "defaultDisclosure": "VOLUNTARY",
+          "description": "Nora provides approximate rather than artificially precise times unless external records help anchor them."
+        }
+      ],
+      "behaviorTriggers": [
+        {
+          "id": "behavior_012",
+          "trigger": "PLAYER_PRESSURES_FOR_UNSUPPORTED_CERTAINTY",
+          "result": "Nora explicitly states that she does not want to guess."
+        },
+        {
+          "id": "behavior_013",
+          "trigger": "PLAYER_SHOWS_DARK_BLUE_VEHICLE_IMAGE",
+          "result": "Nora says it could be the vehicle she saw and acknowledges that the nighttime color may have looked black."
+        }
+      ],
+      "attorneyTriggers": []
+    }
+  ]
 }

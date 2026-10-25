@@ -1,3 +1,727 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "triggers": [
+    {
+      "id": "trigger_001",
+      "name": "Initial crime scene secured",
+      "eventType": "CASE_STARTED",
+      "conditions": [],
+      "once": true,
+      "actions": [
+        {
+          "type": "DISCOVER_LOCATION",
+          "targetId": "loc_001"
+        },
+        {
+          "type": "ACTIVATE_DISCOVERY_RULE",
+          "targetId": "discover_001"
+        }
+      ]
+    },
+    {
+      "id": "trigger_002",
+      "name": "Initial scene evidence collected",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_001"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_001"
+        },
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_002"
+        }
+      ]
+    },
+    {
+      "id": "trigger_003",
+      "name": "Tool and footwear package collected",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_002"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_003"
+        },
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_004"
+        }
+      ]
+    },
+    {
+      "id": "trigger_004",
+      "name": "Wearable collected",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_003"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_005"
+        }
+      ]
+    },
+    {
+      "id": "trigger_005",
+      "name": "Victim phone collected",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_004"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_006"
+        }
+      ]
+    },
+    {
+      "id": "trigger_006",
+      "name": "Phone extraction enables deeper recovery",
+      "eventType": "FORENSIC_RESULT_READY",
+      "conditions": [
+        {
+          "type": "FORENSIC_TEST_ID_EQUALS",
+          "value": "forensic_test_006"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_007"
+        }
+      ]
+    },
+    {
+      "id": "trigger_007",
+      "name": "Business records enable financial review",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_006"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_008"
+        }
+      ]
+    },
+    {
+      "id": "trigger_008",
+      "name": "Vendor irregularities enable system analysis",
+      "eventType": "FACT_DISCOVERED",
+      "conditions": [
+        {
+          "type": "FACT_ID_EQUALS",
+          "value": "fact_010"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ACTIVATE_DISCOVERY_RULE",
+          "targetId": "discover_011"
+        }
+      ]
+    },
+    {
+      "id": "trigger_009",
+      "name": "System metadata available",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_007"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_009"
+        }
+      ]
+    },
+    {
+      "id": "trigger_010",
+      "name": "Movement records available",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_008"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_010"
+        }
+      ]
+    },
+    {
+      "id": "trigger_011",
+      "name": "Ashley refuses vehicle search consent",
+      "eventType": "CONSENT_REQUESTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_003"
+        }
+      ],
+      "once": false,
+      "actions": [
+        {
+          "type": "SET_CONSENT_RESULT",
+          "targetId": "search_zone_003",
+          "value": "REFUSED"
+        }
+      ]
+    },
+    {
+      "id": "trigger_012",
+      "name": "Ashley refuses residence search consent",
+      "eventType": "CONSENT_REQUESTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_004"
+        }
+      ],
+      "once": false,
+      "actions": [
+        {
+          "type": "SET_CONSENT_RESULT",
+          "targetId": "search_zone_004",
+          "value": "REFUSED"
+        }
+      ]
+    },
+    {
+      "id": "trigger_013",
+      "name": "Vehicle warrant search reveals trace package",
+      "eventType": "AUTHORIZED_SEARCH_COMPLETED",
+      "conditions": [
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_003"
+        },
+        {
+          "type": "AUTHORITY_VALID",
+          "value": true
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "DISCOVER_EVIDENCE",
+          "targetId": "ev_009"
+        },
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_011"
+        }
+      ]
+    },
+    {
+      "id": "trigger_014",
+      "name": "Presumptive blood enables DNA comparison",
+      "eventType": "FORENSIC_RESULT_READY",
+      "conditions": [
+        {
+          "type": "FORENSIC_TEST_ID_EQUALS",
+          "value": "forensic_test_011"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_012"
+        }
+      ]
+    },
+    {
+      "id": "trigger_015",
+      "name": "Residence warrant search recovers laptop",
+      "eventType": "AUTHORIZED_SEARCH_COMPLETED",
+      "conditions": [
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_004"
+        },
+        {
+          "type": "AUTHORITY_VALID",
+          "value": true
+        },
+        {
+          "type": "WARRANT_SCOPE_INCLUDES",
+          "value": "MISSING_PROPERTY"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "DISCOVER_EVIDENCE",
+          "targetId": "ev_010"
+        },
+        {
+          "type": "DISCOVER_FACT",
+          "targetId": "fact_024"
+        }
+      ]
+    },
+    {
+      "id": "trigger_016",
+      "name": "Digital authority enables laptop examination",
+      "eventType": "DIGITAL_SEARCH_AUTHORIZED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_010"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_013"
+        }
+      ]
+    },
+    {
+      "id": "trigger_017",
+      "name": "Laptop review enables forensic image",
+      "eventType": "FORENSIC_RESULT_READY",
+      "conditions": [
+        {
+          "type": "FORENSIC_TEST_ID_EQUALS",
+          "value": "forensic_test_013"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ENABLE_FORENSIC_TEST",
+          "targetId": "forensic_test_014"
+        }
+      ]
+    },
+    {
+      "id": "trigger_018",
+      "name": "Caleb confronted with visit evidence",
+      "eventType": "INTERVIEW_EVIDENCE_PRESENTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_004"
+        },
+        {
+          "type": "FACT_KNOWN",
+          "value": "fact_005"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ACTIVATE_STATEMENT",
+          "targetId": "statement_014"
+        },
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_004",
+          "value": "VISIT_ADMITTED"
+        }
+      ]
+    },
+    {
+      "id": "trigger_019",
+      "name": "Caleb theft admission becomes available",
+      "eventType": "INTERVIEW_PRESSURE_CHANGED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_004"
+        },
+        {
+          "type": "FACT_KNOWN",
+          "value": "fact_006"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ACTIVATE_STATEMENT",
+          "targetId": "statement_015"
+        }
+      ]
+    },
+    {
+      "id": "trigger_020",
+      "name": "Nora vehicle comparison clarification",
+      "eventType": "INTERVIEW_EVIDENCE_PRESENTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_006"
+        },
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_008"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "ACTIVATE_STATEMENT",
+          "targetId": "statement_019"
+        }
+      ]
+    },
+    {
+      "id": "trigger_021",
+      "name": "Ashley financial defensiveness",
+      "eventType": "INTERVIEW_EVIDENCE_PRESENTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_007"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "FINANCIAL_DEFENSIVE"
+        },
+        {
+          "type": "ACTIVATE_STATEMENT",
+          "targetId": "statement_003"
+        }
+      ]
+    },
+    {
+      "id": "trigger_022",
+      "name": "Ashley challenges movement evidence",
+      "eventType": "INTERVIEW_EVIDENCE_PRESENTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_008"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "MOVEMENT_DEFENSIVE"
+        },
+        {
+          "type": "ACTIVATE_STATEMENT",
+          "targetId": "statement_006"
+        }
+      ]
+    },
+    {
+      "id": "trigger_023",
+      "name": "Ashley guarded after laptop recovery",
+      "eventType": "EVIDENCE_DISCOVERED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_010"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "HIGHLY_GUARDED"
+        }
+      ]
+    },
+    {
+      "id": "trigger_024",
+      "name": "Ashley counsel risk after warrant service",
+      "eventType": "WARRANT_SERVED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "COUNSEL_LIKELY"
+        }
+      ]
+    },
+    {
+      "id": "trigger_025",
+      "name": "Ashley invokes counsel after strong confrontation",
+      "eventType": "INTERVIEW_EVIDENCE_PRESENTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "FACT_KNOWN",
+          "value": "fact_023"
+        },
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_009"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "COUNSEL_INVOKED"
+        },
+        {
+          "type": "TERMINATE_VOLUNTARY_INTERVIEW",
+          "targetId": "char_002"
+        }
+      ]
+    },
+    {
+      "id": "trigger_026",
+      "name": "Leah cooperation decreases after unsupported repeated accusation",
+      "eventType": "INTERVIEW_ACCUSATION",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_003"
+        },
+        {
+          "type": "REPEATED_WITHOUT_NEW_EVIDENCE",
+          "value": true
+        }
+      ],
+      "once": false,
+      "actions": [
+        {
+          "type": "DECREASE_COOPERATION",
+          "targetId": "char_003",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "trigger_027",
+      "name": "Isaac cooperation improves after alibi confirmation",
+      "eventType": "FACT_DISCOVERED",
+      "conditions": [
+        {
+          "type": "FACT_ID_EQUALS",
+          "value": "fact_028"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "INCREASE_COOPERATION",
+          "targetId": "char_005",
+          "value": 1
+        },
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_005",
+          "value": "LESS_HOSTILE"
+        }
+      ]
+    },
+    {
+      "id": "trigger_028",
+      "name": "Unauthorized vehicle search creates suppression issue",
+      "eventType": "SEARCH_COMPLETED",
+      "conditions": [
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_003"
+        },
+        {
+          "type": "AUTHORITY_VALID",
+          "value": false
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "APPLY_LEGAL_RULE",
+          "targetId": "legal_rule_009"
+        },
+        {
+          "type": "RECORD_PROCEDURAL_ERROR",
+          "targetId": "search_zone_003"
+        }
+      ]
+    },
+    {
+      "id": "trigger_029",
+      "name": "Unauthorized residence search creates suppression issue",
+      "eventType": "SEARCH_COMPLETED",
+      "conditions": [
+        {
+          "type": "SEARCH_ZONE_ID_EQUALS",
+          "value": "search_zone_004"
+        },
+        {
+          "type": "AUTHORITY_VALID",
+          "value": false
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "APPLY_LEGAL_RULE",
+          "targetId": "legal_rule_010"
+        },
+        {
+          "type": "RECORD_PROCEDURAL_ERROR",
+          "targetId": "search_zone_004"
+        }
+      ]
+    },
+    {
+      "id": "trigger_030",
+      "name": "Unauthorized laptop-content search creates suppression issue",
+      "eventType": "DIGITAL_SEARCH_COMPLETED",
+      "conditions": [
+        {
+          "type": "EVIDENCE_ID_EQUALS",
+          "value": "ev_010"
+        },
+        {
+          "type": "AUTHORITY_VALID",
+          "value": false
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "APPLY_LEGAL_RULE",
+          "targetId": "legal_rule_012"
+        },
+        {
+          "type": "RECORD_PROCEDURAL_ERROR",
+          "targetId": "ev_010"
+        }
+      ]
+    },
+    {
+      "id": "trigger_031",
+      "name": "Premature Ashley arrest damages case posture",
+      "eventType": "ARREST_ATTEMPTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "LEGAL_RULE_NOT_SATISFIED",
+          "value": "legal_rule_008"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "DENY_ACTION",
+          "targetId": "char_002"
+        },
+        {
+          "type": "RECORD_PROCEDURAL_ERROR",
+          "targetId": "legal_rule_008"
+        },
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "HIGHLY_GUARDED"
+        }
+      ]
+    },
+    {
+      "id": "trigger_032",
+      "name": "Valid probable cause supports Ashley arrest",
+      "eventType": "ARREST_ATTEMPTED",
+      "conditions": [
+        {
+          "type": "CHARACTER_ID_EQUALS",
+          "value": "char_002"
+        },
+        {
+          "type": "LEGAL_RULE_SATISFIED",
+          "value": "legal_rule_008"
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "AUTHORIZE_ACTION",
+          "targetId": "char_002"
+        },
+        {
+          "type": "SET_CHARACTER_BEHAVIOR_STATE",
+          "targetId": "char_002",
+          "value": "IN_CUSTODY"
+        }
+      ]
+    }
+  ]
 }

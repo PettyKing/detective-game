@@ -1,3 +1,272 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "forensicTests": [
+    {
+      "id": "forensic_test_001",
+      "name": "Workshop Scene Reconstruction",
+      "evidenceId": "ev_001",
+      "testType": "SCENE_RECONSTRUCTION",
+      "processingMinutes": 25,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_001",
+      "resultSummary": "The apparent ladder-fall explanation does not adequately account for the physical scene. Findings support an assault followed by limited staging.",
+      "revealedFactIds": [
+        "fact_002",
+        "fact_019"
+      ]
+    },
+    {
+      "id": "forensic_test_002",
+      "name": "Bloodstain Pattern Review",
+      "evidenceId": "ev_001",
+      "testType": "BLOODSTAIN_PATTERN_REVIEW",
+      "processingMinutes": 40,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_002",
+      "resultSummary": "Blood distribution supports more than one significant impact event and is inconsistent with the apparent accidental-fall mechanism.",
+      "revealedFactIds": [
+        "fact_002",
+        "fact_003"
+      ]
+    },
+    {
+      "id": "forensic_test_003",
+      "name": "Tool and Injury Comparison",
+      "evidenceId": "ev_002",
+      "testType": "TOOL_INJURY_COMPARISON",
+      "processingMinutes": 55,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_003",
+      "resultSummary": "The framing hammer is physically compatible with the injury class but cannot be identified as the weapon to the exclusion of all similar tools.",
+      "revealedFactIds": [
+        "fact_018"
+      ]
+    },
+    {
+      "id": "forensic_test_004",
+      "name": "Footwear Impression Analysis",
+      "evidenceId": "ev_002",
+      "testType": "FOOTWEAR_IMPRESSION_ANALYSIS",
+      "processingMinutes": 70,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_004",
+      "resultSummary": "The partial impression contains useful tread characteristics for comparison but is not uniquely identifying.",
+      "revealedFactIds": []
+    },
+    {
+      "id": "forensic_test_005",
+      "name": "Wearable Data Extraction",
+      "evidenceId": "ev_003",
+      "testType": "WEARABLE_DATA_EXTRACTION",
+      "processingMinutes": 35,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "LAWFUL_VICTIM_DEVICE_PROCESSING"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_005",
+      "resultSummary": "Grant's wearable data supports a critical physiological event occurring at approximately 10:16 PM, with a reasonable forensic window of several minutes.",
+      "revealedFactIds": [
+        "fact_004"
+      ]
+    },
+    {
+      "id": "forensic_test_006",
+      "name": "Victim Phone Logical Extraction",
+      "evidenceId": "ev_004",
+      "testType": "PHONE_LOGICAL_EXTRACTION",
+      "processingMinutes": 45,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "LAWFUL_VICTIM_DEVICE_PROCESSING"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_006",
+      "resultSummary": "The extraction confirms Grant's communication with the accountant and his later exchange with Ashley.",
+      "revealedFactIds": [
+        "fact_014",
+        "fact_015"
+      ]
+    },
+    {
+      "id": "forensic_test_007",
+      "name": "Deleted Message Recovery",
+      "evidenceId": "ev_004",
+      "testType": "DELETED_MESSAGE_RECOVERY",
+      "processingMinutes": 80,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "LAWFUL_VICTIM_DEVICE_PROCESSING"
+      ],
+      "prerequisiteTestIds": [
+        "forensic_test_006"
+      ],
+      "resultId": "forensic_result_007",
+      "resultSummary": "Metadata and recoverable fragments establish that portions of the Grant-Ashley exchange were deleted after the homicide, though every deleted sentence cannot be reconstructed.",
+      "revealedFactIds": [
+        "fact_022"
+      ]
+    },
+    {
+      "id": "forensic_test_008",
+      "name": "Financial Pattern Review",
+      "evidenceId": "ev_006",
+      "testType": "FINANCIAL_PATTERN_REVIEW",
+      "processingMinutes": 60,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "BUSINESS_RECORD_ACCESS_REQUIRED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_008",
+      "resultSummary": "Northline Fixtures lacks the documentation and operating history expected of a legitimate active supplier. The payment pattern is consistent with a fictitious-vendor scheme.",
+      "revealedFactIds": [
+        "fact_010",
+        "fact_011"
+      ]
+    },
+    {
+      "id": "forensic_test_009",
+      "name": "Vendor System Log Analysis",
+      "evidenceId": "ev_007",
+      "testType": "SYSTEM_LOG_ANALYSIS",
+      "processingMinutes": 65,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "BUSINESS_RECORD_ACCESS_REQUIRED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_009",
+      "resultSummary": "System activity materially connects Ashley's assigned credentials or workstation to suspicious Northline Fixtures activity, while preserving the limitation that Ashley also possessed legitimate access.",
+      "revealedFactIds": [
+        "fact_012"
+      ]
+    },
+    {
+      "id": "forensic_test_010",
+      "name": "Movement Timeline Analysis",
+      "evidenceId": "ev_008",
+      "testType": "MOVEMENT_TIMELINE_ANALYSIS",
+      "processingMinutes": 50,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "LAWFUL_RECORD_ACCESS_REQUIRED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_010",
+      "resultSummary": "Combined movement information materially supports Ashley's presence near Grant's residence during the homicide window and conflicts with a categorical denial that she went there.",
+      "revealedFactIds": [
+        "fact_016",
+        "fact_021"
+      ]
+    },
+    {
+      "id": "forensic_test_011",
+      "name": "SUV Presumptive Blood Test",
+      "evidenceId": "ev_009",
+      "testType": "PRESUMPTIVE_BLOOD_TEST",
+      "processingMinutes": 35,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "VEHICLE_SCOPE_REQUIRED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_011",
+      "resultSummary": "A partially cleaned area within the SUV produces a presumptive positive indication for blood.",
+      "revealedFactIds": []
+    },
+    {
+      "id": "forensic_test_012",
+      "name": "SUV DNA Profile Comparison",
+      "evidenceId": "ev_009",
+      "testType": "DNA_PROFILE_COMPARISON",
+      "processingMinutes": 120,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "VEHICLE_SCOPE_REQUIRED"
+      ],
+      "prerequisiteTestIds": [
+        "forensic_test_011"
+      ],
+      "resultId": "forensic_result_012",
+      "resultSummary": "The recovered biological profile is consistent with Grant Holloway and provides strong physical corroboration connecting Grant's blood to Ashley's vehicle.",
+      "revealedFactIds": [
+        "fact_023"
+      ]
+    },
+    {
+      "id": "forensic_test_013",
+      "name": "Laptop Ownership and File Review",
+      "evidenceId": "ev_010",
+      "testType": "DEVICE_OWNERSHIP_AND_FILE_REVIEW",
+      "processingMinutes": 40,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "RESIDENCE_OR_PROPERTY_SCOPE_REQUIRED",
+        "DIGITAL_EXAMINATION_AUTHORITY_REQUIRED"
+      ],
+      "prerequisiteTestIds": [],
+      "resultId": "forensic_result_013",
+      "resultSummary": "The device is confirmed as Grant's missing laptop. Recent files demonstrate his active investigation into Northline Fixtures.",
+      "revealedFactIds": [
+        "fact_013",
+        "fact_020",
+        "fact_024"
+      ]
+    },
+    {
+      "id": "forensic_test_014",
+      "name": "Laptop Forensic Image",
+      "evidenceId": "ev_010",
+      "testType": "LAPTOP_FORENSIC_IMAGE",
+      "processingMinutes": 90,
+      "requestable": true,
+      "requiresEvidenceDiscovered": true,
+      "requiredAuthorizationTags": [
+        "DIGITAL_EXAMINATION_AUTHORITY_REQUIRED"
+      ],
+      "prerequisiteTestIds": [
+        "forensic_test_013"
+      ],
+      "resultId": "forensic_result_014",
+      "resultSummary": "A forensic image preserves Grant's recent financial analysis and supporting records while maintaining the integrity of the original device.",
+      "revealedFactIds": [
+        "fact_013"
+      ]
+    }
+  ]
 }

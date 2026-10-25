@@ -1,3 +1,74 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "canonicalNarrative": "Grant Holloway discovered that Ashley Williams had been diverting company funds through the fictitious vendor Northline Fixtures. On the night of Grant's death, Ashley went to his residence after learning that he intended to expose the fraud. A confrontation occurred inside Grant's detached workshop. Ashley struck Grant with a framing hammer, causing fatal injuries. She then disturbed the scene to suggest an accidental fall, removed Grant's laptop because it contained financial evidence, deleted portions of her communications with him, and later attempted to clean the cargo area of her SUV. Trace biological evidence remained recoverable. Caleb Holloway had visited Grant earlier that evening, argued with him, and stolen cash, but Caleb did not participate in the homicide.",
+  "victimCharacterIds": [
+    "char_001"
+  ],
+  "responsibleCharacterIds": [
+    "char_002"
+  ],
+  "accompliceCharacterIds": [],
+  "primaryOffenseIds": [
+    "offense_001"
+  ],
+  "motiveFactIds": [
+    "fact_010",
+    "fact_011",
+    "fact_012",
+    "fact_013"
+  ],
+  "methodFactIds": [
+    "fact_017",
+    "fact_018",
+    "fact_019"
+  ],
+  "opportunityFactIds": [
+    "fact_014",
+    "fact_015",
+    "fact_016"
+  ],
+  "criticalTimelineFactIds": [
+    "fact_005",
+    "fact_006",
+    "fact_007",
+    "fact_008",
+    "fact_009",
+    "fact_014",
+    "fact_015",
+    "fact_016",
+    "fact_017",
+    "fact_020",
+    "fact_021"
+  ],
+  "essentialEvidenceIds": [
+    "ev_001",
+    "ev_003",
+    "ev_004",
+    "ev_006",
+    "ev_007",
+    "ev_008",
+    "ev_009",
+    "ev_010"
+  ],
+  "solutionFactIds": [
+    "fact_010",
+    "fact_011",
+    "fact_012",
+    "fact_013",
+    "fact_014",
+    "fact_015",
+    "fact_016",
+    "fact_017",
+    "fact_018",
+    "fact_019",
+    "fact_020",
+    "fact_021",
+    "fact_022",
+    "fact_023",
+    "fact_024"
+  ],
+  "startingGameTime": "2026-04-14T08:00:00-04:00",
+  "startingLocationId": "loc_001"
 }

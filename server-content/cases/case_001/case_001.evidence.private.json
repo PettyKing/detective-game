@@ -1,3 +1,509 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "evidence": [
+    {
+      "id": "ev_001",
+      "name": "Workshop Scene Evidence",
+      "evidenceType": "PHYSICAL_SCENE",
+      "originLocationId": "loc_001",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_002",
+        "fact_003",
+        "fact_017",
+        "fact_018",
+        "fact_019"
+      ],
+      "actualProperties": {
+        "bodyPosition": "Grant is located near a ladder and work area in a position initially capable of suggesting an accidental fall.",
+        "bloodPattern": "Blood distribution and impact characteristics are inconsistent with a single uncomplicated fall.",
+        "ladderCondition": "The ladder is displaced but lacks a fully convincing physical relationship to the fatal injury pattern.",
+        "sceneDisturbance": "Several nearby objects appear moved after the primary injury event.",
+        "toolEnvironment": "Multiple construction tools are present, including a framing hammer consistent with the general class of object capable of producing the injuries."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_001",
+          "testType": "SCENE_RECONSTRUCTION",
+          "processingMinutes": 25,
+          "resultData": "The observed scene is inconsistent with a simple accidental ladder fall. Physical findings support an assault followed by limited staging.",
+          "revealedFactIds": [
+            "fact_002",
+            "fact_019"
+          ]
+        },
+        {
+          "id": "forensic_result_002",
+          "testType": "BLOODSTAIN_PATTERN_REVIEW",
+          "processingMinutes": 40,
+          "resultData": "Blood distribution indicates more than one significant impact event and does not align with the apparent ladder-fall mechanism.",
+          "revealedFactIds": [
+            "fact_002",
+            "fact_003"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Establishes that the apparent accident is unreliable and supports classification of the death as an intentional assault.",
+      "discoveryRuleIds": [
+        "discover_001",
+        "discover_002",
+        "discover_003"
+      ],
+      "authorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "contaminationRisks": [
+        "Uncontrolled movement through the workshop may compromise trace interpretation.",
+        "Moving the ladder or tools before documentation may reduce reconstruction quality."
+      ],
+      "admissibilityRisks": [
+        "Poor scene documentation may weaken expert conclusions."
+      ]
+    },
+    {
+      "id": "ev_002",
+      "name": "Workshop Tool and Footwear Trace Package",
+      "evidenceType": "TRACE_AND_TOOL",
+      "originLocationId": "loc_001",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_017",
+        "fact_018"
+      ],
+      "actualProperties": {
+        "framingHammer": "A framing hammer from the workshop is consistent in general size, mass, and shape with the injury mechanism.",
+        "weaponDefinitiveness": "The hammer cannot by itself conclusively identify who used it.",
+        "footwearTrace": "A partial footwear impression is preserved near the meaningful assault area.",
+        "footwearSpecificity": "The impression contains class characteristics useful for comparison but is not uniquely identifying."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_003",
+          "testType": "TOOL_INJURY_COMPARISON",
+          "processingMinutes": 55,
+          "resultData": "The framing hammer is physically compatible with the injury class but cannot be identified as the weapon to the exclusion of all similar tools.",
+          "revealedFactIds": [
+            "fact_018"
+          ]
+        },
+        {
+          "id": "forensic_result_004",
+          "testType": "FOOTWEAR_IMPRESSION_ANALYSIS",
+          "processingMinutes": 70,
+          "resultData": "The partial impression supports comparison against candidate footwear and may include or exclude certain tread patterns. It is corroborative rather than individually conclusive.",
+          "revealedFactIds": []
+        }
+      ],
+      "canonicalSignificance": "Provides a forensic route into method and possible scene-presence comparisons without becoming a single-source identification clue.",
+      "discoveryRuleIds": [
+        "discover_019",
+        "discover_020"
+      ],
+      "authorizationTags": [
+        "CRIME_SCENE_AUTHORIZED"
+      ],
+      "contaminationRisks": [
+        "Footwear impressions are vulnerable to trampling.",
+        "Tool handling before collection may compromise trace evidence."
+      ],
+      "admissibilityRisks": [
+        "Overstating a class-characteristic footwear comparison would create evidentiary weakness."
+      ]
+    },
+    {
+      "id": "ev_003",
+      "name": "Grant Holloway Wearable Data",
+      "evidenceType": "DIGITAL_DEVICE",
+      "originLocationId": "loc_001",
+      "relatedCharacterIds": [
+        "char_001"
+      ],
+      "relatedFactIds": [
+        "fact_004",
+        "fact_017"
+      ],
+      "actualProperties": {
+        "deviceType": "Smartwatch",
+        "lastNormalActivity": "Normal movement and physiological readings continue into the late evening.",
+        "criticalEventWindow": "Abrupt abnormal readings occur approximately during the 10:14 PM to 10:18 PM window.",
+        "postEventActivity": "No meaningful voluntary activity is recorded after the critical event."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_005",
+          "testType": "WEARABLE_DATA_EXTRACTION",
+          "processingMinutes": 35,
+          "resultData": "The data supports a critical physiological event occurring at approximately 10:16 PM, with a reasonable forensic window of several minutes.",
+          "revealedFactIds": [
+            "fact_004"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Narrows the homicide window and permits comparison against suspect movements and alibis.",
+      "discoveryRuleIds": [
+        "discover_004"
+      ],
+      "authorizationTags": [
+        "LAWFUL_VICTIM_DEVICE_PROCESSING"
+      ],
+      "contaminationRisks": [],
+      "admissibilityRisks": [
+        "The device time should be validated against network or phone time before investigators claim minute-level precision."
+      ]
+    },
+    {
+      "id": "ev_004",
+      "name": "Grant Holloway Phone Extraction",
+      "evidenceType": "DIGITAL_COMMUNICATIONS",
+      "originLocationId": "loc_001",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_013",
+        "fact_014",
+        "fact_015",
+        "fact_022"
+      ],
+      "actualProperties": {
+        "accountantMessage": "Grant indicates that he found something serious in the company records and wants to meet the following morning.",
+        "ashleyConversation": "Grant and Ashley exchange messages later that evening. The surviving portions become increasingly tense.",
+        "deletionArtifacts": "Technical artifacts indicate that portions of the Ashley conversation were removed after the homicide.",
+        "exactDeletedTextAvailability": "Not every deleted message is fully recoverable."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_006",
+          "testType": "PHONE_LOGICAL_EXTRACTION",
+          "processingMinutes": 45,
+          "resultData": "Extraction confirms Grant's 9:36 PM communication with the accountant and the later exchange with Ashley.",
+          "revealedFactIds": [
+            "fact_014",
+            "fact_015"
+          ]
+        },
+        {
+          "id": "forensic_result_007",
+          "testType": "DELETED_MESSAGE_RECOVERY",
+          "processingMinutes": 80,
+          "resultData": "Metadata and recoverable fragments establish that portions of the Grant-Ashley conversation were deleted after the homicide. The recovery does not reconstruct every deleted sentence.",
+          "revealedFactIds": [
+            "fact_022"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Links Grant's financial discovery to Ashley, establishes pre-homicide contact, and provides evidence of post-event concealment.",
+      "discoveryRuleIds": [
+        "discover_013",
+        "discover_014",
+        "discover_015",
+        "discover_023"
+      ],
+      "authorizationTags": [
+        "LAWFUL_VICTIM_DEVICE_PROCESSING"
+      ],
+      "contaminationRisks": [],
+      "admissibilityRisks": [
+        "Recovered fragments must not be represented as complete messages when only metadata or partial text survives."
+      ]
+    },
+    {
+      "id": "ev_005",
+      "name": "Nora Bell Witness Observation Record",
+      "evidenceType": "WITNESS_RECORD",
+      "originLocationId": "loc_001",
+      "relatedCharacterIds": [
+        "char_002",
+        "char_006"
+      ],
+      "relatedFactIds": [
+        "fact_016",
+        "fact_021",
+        "fact_025"
+      ],
+      "actualProperties": {
+        "vehicleObservation": "Nora observed a dark SUV near Grant's property during the relevant period.",
+        "colorMemory": "Nora initially recalls the SUV as black.",
+        "canonicalVehicleColor": "Ashley's SUV is very dark blue.",
+        "lightingConditions": "Nighttime lighting reasonably explains the color discrepancy.",
+        "timingPrecision": "Nora's times are approximate until anchored by other records.",
+        "voiceObservation": "Nora heard raised voices but cannot reliably identify the speakers."
+      },
+      "canonicalForensicResults": [],
+      "canonicalSignificance": "Provides independent corroboration of vehicle activity while demonstrating that eyewitness recollection can be useful without being perfect.",
+      "discoveryRuleIds": [
+        "discover_017"
+      ],
+      "authorizationTags": [
+        "VOLUNTARY_WITNESS_INFORMATION"
+      ],
+      "contaminationRisks": [
+        "Suggestive questioning could distort later identification or confidence."
+      ],
+      "admissibilityRisks": [
+        "Investigators should preserve Nora's original uncertainty and avoid converting an approximate observation into false certainty."
+      ]
+    },
+    {
+      "id": "ev_006",
+      "name": "Hollis and Holloway Vendor Records",
+      "evidenceType": "FINANCIAL_RECORDS",
+      "originLocationId": "loc_002",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_010",
+        "fact_011",
+        "fact_013"
+      ],
+      "actualProperties": {
+        "vendorName": "Northline Fixtures",
+        "paymentPattern": "Repeated payments exist that initially resemble ordinary vendor expenses.",
+        "supportingDocuments": "Expected invoices, delivery records, contact history, and ordinary vendor documentation are incomplete or absent.",
+        "businessExistence": "Investigation fails to locate a normal operating vendor corresponding to the payment pattern.",
+        "totalLoss": "The amount is substantial enough to create a serious motive but is not necessary to prove the homicide by itself."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_008",
+          "testType": "FINANCIAL_PATTERN_REVIEW",
+          "processingMinutes": 60,
+          "resultData": "Northline Fixtures demonstrates characteristics inconsistent with an ordinary active supplier and consistent with a fictitious vendor payment scheme.",
+          "revealedFactIds": [
+            "fact_010",
+            "fact_011"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Establishes the underlying financial fraud and supplies a credible motive for preventing Grant from exposing it.",
+      "discoveryRuleIds": [
+        "discover_010",
+        "discover_011"
+      ],
+      "authorizationTags": [
+        "BUSINESS_RECORD_ACCESS_REQUIRED"
+      ],
+      "contaminationRisks": [],
+      "admissibilityRisks": [
+        "Financial conclusions should be supported by authenticated records rather than investigator summaries alone."
+      ]
+    },
+    {
+      "id": "ev_007",
+      "name": "Vendor System Access Metadata",
+      "evidenceType": "DIGITAL_BUSINESS_RECORD",
+      "originLocationId": "loc_002",
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_012"
+      ],
+      "actualProperties": {
+        "accountAssociation": "Activity involving Northline Fixtures is associated with credentials and workstation access assigned to Ashley.",
+        "legitimateAccessContext": "Ashley legitimately uses the same systems as part of her employment.",
+        "suspiciousActivity": "The timing and pattern of access overlap with creation, maintenance, or approval activity for Northline Fixtures.",
+        "individualProofLimit": "Credentials alone do not independently prove that Ashley personally performed every recorded action."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_009",
+          "testType": "SYSTEM_LOG_ANALYSIS",
+          "processingMinutes": 65,
+          "resultData": "System logs materially connect Ashley's assigned credentials or workstation activity to suspicious Northline Fixtures activity. The result requires corroboration because Ashley had legitimate access to the system.",
+          "revealedFactIds": [
+            "fact_012"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Connects Ashley to the fraud while preserving enough ambiguity that the player must corroborate motive with additional evidence.",
+      "discoveryRuleIds": [
+        "discover_011",
+        "discover_012"
+      ],
+      "authorizationTags": [
+        "BUSINESS_RECORD_ACCESS_REQUIRED"
+      ],
+      "contaminationRisks": [],
+      "admissibilityRisks": [
+        "Investigators must not characterize shared or legitimate-access metadata as exclusive identification without support."
+      ]
+    },
+    {
+      "id": "ev_008",
+      "name": "Ashley Williams Movement Record",
+      "evidenceType": "MOVEMENT_AND_LOCATION",
+      "originLocationId": "loc_003",
+      "relatedCharacterIds": [
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_016",
+        "fact_021",
+        "fact_025"
+      ],
+      "actualProperties": {
+        "vehicleDescription": "Ashley drives a very dark blue SUV.",
+        "movementPattern": "Available records place Ashley or her vehicle in the area of Grant's residence during the relevant period.",
+        "arrivalSupport": "The evidence is consistent with arrival shortly after 10:00 PM.",
+        "departureSupport": "The evidence is consistent with departure shortly after the homicide window.",
+        "precisionLimit": "No single location record places Ashley at an exact square-foot position inside the workshop."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_010",
+          "testType": "MOVEMENT_TIMELINE_ANALYSIS",
+          "processingMinutes": 50,
+          "resultData": "Combined movement information materially supports Ashley's presence near Grant's residence during the homicide window and conflicts with a categorical denial that she went there.",
+          "revealedFactIds": [
+            "fact_016",
+            "fact_021"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Provides opportunity evidence and corroborates Nora's imperfect observation.",
+      "discoveryRuleIds": [
+        "discover_016",
+        "discover_018"
+      ],
+      "authorizationTags": [
+        "LAWFUL_RECORD_ACCESS_REQUIRED"
+      ],
+      "contaminationRisks": [],
+      "admissibilityRisks": [
+        "Location precision must not be overstated.",
+        "Records acquired without appropriate legal authority may become unusable."
+      ]
+    },
+    {
+      "id": "ev_009",
+      "name": "Ashley Williams SUV Trace Evidence",
+      "evidenceType": "BIOLOGICAL_TRACE",
+      "originLocationId": "loc_003",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_017",
+        "fact_023"
+      ],
+      "actualProperties": {
+        "vehicleOwner": "Ashley Williams",
+        "searchRequirement": "The relevant areas of the vehicle require valid consent or other lawful search authority.",
+        "cleaningIndicators": "The cargo area shows signs of recent cleaning inconsistent with ordinary accumulated dirt patterns.",
+        "presumptiveFinding": "A small cleaned or partially cleaned stain reacts consistently with possible blood.",
+        "canonicalSource": "The biological material originates from Grant Holloway."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_011",
+          "testType": "PRESUMPTIVE_BLOOD_TEST",
+          "processingMinutes": 35,
+          "resultData": "A concealed or partially cleaned area in the SUV produces a presumptive positive indication for blood.",
+          "revealedFactIds": []
+        },
+        {
+          "id": "forensic_result_012",
+          "testType": "DNA_PROFILE_COMPARISON",
+          "processingMinutes": 120,
+          "resultData": "The recovered biological profile is consistent with Grant Holloway and provides strong physical corroboration connecting Grant's blood to Ashley's vehicle.",
+          "revealedFactIds": [
+            "fact_023"
+          ]
+        }
+      ],
+      "canonicalSignificance": "One of the strongest physical corroboration items in the case. It substantially strengthens the homicide theory but remains dependent on lawful collection and admissibility.",
+      "discoveryRuleIds": [
+        "discover_024",
+        "discover_025"
+      ],
+      "authorizationTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "VEHICLE_SCOPE_REQUIRED"
+      ],
+      "contaminationRisks": [
+        "Failure to use clean collection procedures may create contamination arguments."
+      ],
+      "admissibilityRisks": [
+        "An unlawful vehicle search may result in suppression.",
+        "Exceeding the authorized search scope may jeopardize collection.",
+        "Weak chain-of-custody documentation may reduce evidentiary weight."
+      ]
+    },
+    {
+      "id": "ev_010",
+      "name": "Grant Holloway Laptop",
+      "evidenceType": "DIGITAL_DEVICE_AND_PROPERTY",
+      "originLocationId": "loc_003",
+      "relatedCharacterIds": [
+        "char_001",
+        "char_002"
+      ],
+      "relatedFactIds": [
+        "fact_013",
+        "fact_020",
+        "fact_024"
+      ],
+      "actualProperties": {
+        "owner": "Grant Holloway",
+        "missingFromScene": true,
+        "canonicalPossession": "The laptop is located within Ashley's control during a properly authorized search.",
+        "financialMaterial": "The laptop contains Grant's working notes and copies of financial records relating to Northline Fixtures.",
+        "recentActivity": "Recent documents demonstrate that Grant was actively examining the suspicious transactions shortly before his death."
+      },
+      "canonicalForensicResults": [
+        {
+          "id": "forensic_result_013",
+          "testType": "DEVICE_OWNERSHIP_AND_FILE_REVIEW",
+          "processingMinutes": 40,
+          "resultData": "The device is confirmed as Grant's missing laptop. Recent files demonstrate his ongoing Northline Fixtures investigation.",
+          "revealedFactIds": [
+            "fact_013",
+            "fact_020",
+            "fact_024"
+          ]
+        },
+        {
+          "id": "forensic_result_014",
+          "testType": "LAPTOP_FORENSIC_IMAGE",
+          "processingMinutes": 90,
+          "resultData": "A forensic image preserves Grant's recent financial analysis and supporting files without requiring investigators to work directly from the original device.",
+          "revealedFactIds": [
+            "fact_013"
+          ]
+        }
+      ],
+      "canonicalSignificance": "Strongly corroborates Ashley's concealment behavior, links the homicide to the financial motive, and demonstrates possession of property removed from the crime scene.",
+      "discoveryRuleIds": [
+        "discover_021",
+        "discover_022",
+        "discover_026"
+      ],
+      "authorizationTags": [
+        "SEARCH_AUTHORITY_REQUIRED",
+        "RESIDENCE_OR_PROPERTY_SCOPE_REQUIRED",
+        "DIGITAL_EXAMINATION_AUTHORITY_REQUIRED"
+      ],
+      "contaminationRisks": [
+        "Opening or altering files before forensic imaging may change metadata."
+      ],
+      "admissibilityRisks": [
+        "Recovery outside valid warrant scope may result in suppression.",
+        "A separate or sufficiently broad digital-search authorization may be required to examine device contents.",
+        "Failure to preserve a forensic image may create authenticity challenges."
+      ]
+    }
+  ]
 }

@@ -1,3 +1,754 @@
 ﻿{
-    "warning":  "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER"
+  "warning": "SPOILER — COMPLETE CASE SOLUTION — DO NOT DISPLAY TO PLAYTESTER",
+  "schemaVersion": 1,
+  "caseId": "case_001",
+  "discoveryRules": [
+    {
+      "id": "discover_001",
+      "name": "Initial Workshop Examination",
+      "routeGroup": "SCENE",
+      "triggerType": "EXAMINE_LOCATION",
+      "triggerEntityIds": [
+        "loc_001"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_001"
+      ],
+      "revealedEvidenceIds": [
+        "ev_001",
+        "ev_002",
+        "ev_003",
+        "ev_004"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_002",
+      "name": "Recognize Scene Inconsistencies",
+      "routeGroup": "SCENE",
+      "triggerType": "EXAMINE_EVIDENCE",
+      "triggerEntityIds": [
+        "ev_001"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_001"
+      ],
+      "revealedFactIds": [
+        "fact_002",
+        "fact_019"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_003",
+      "name": "Scene Forensic Interpretation",
+      "routeGroup": "FORENSIC",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_001",
+        "forensic_test_002"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_001"
+      ],
+      "revealedFactIds": [
+        "fact_002",
+        "fact_003",
+        "fact_019"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_004",
+      "name": "Establish Critical Time Window",
+      "routeGroup": "FORENSIC",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_005"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_003"
+      ],
+      "revealedFactIds": [
+        "fact_004"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_005",
+      "name": "Corroborate Caleb Visit",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "INVESTIGATIVE_CORROBORATION",
+      "triggerEntityIds": [
+        "char_004",
+        "loc_001"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_005"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_006",
+      "name": "Confront Caleb About Visit",
+      "routeGroup": "INTERVIEW",
+      "triggerType": "INTERVIEW_CONFRONTATION",
+      "triggerEntityIds": [
+        "char_004"
+      ],
+      "requiredFactIds": [
+        "fact_005"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_006",
+        "fact_008"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_007",
+      "name": "Develop Caleb Financial Secret",
+      "routeGroup": "INTERVIEW",
+      "triggerType": "INTERVIEW_PRESSURE",
+      "triggerEntityIds": [
+        "char_004"
+      ],
+      "requiredFactIds": [
+        "fact_006"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_007"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_008",
+      "name": "Confirm Caleb Theft",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "CORROBORATE_STATEMENT",
+      "triggerEntityIds": [
+        "char_004"
+      ],
+      "requiredFactIds": [
+        "fact_005",
+        "fact_006"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_007"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_009",
+      "name": "Separate Caleb From Homicide Window",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "TIMELINE_CORROBORATION",
+      "triggerEntityIds": [
+        "char_004"
+      ],
+      "requiredFactIds": [
+        "fact_004",
+        "fact_005"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_009"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_010",
+      "name": "Review Company Vendor Records",
+      "routeGroup": "FINANCIAL",
+      "triggerType": "EXAMINE_LOCATION",
+      "triggerEntityIds": [
+        "loc_002"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [],
+      "revealedEvidenceIds": [
+        "ev_006"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_011",
+      "name": "Identify Northline Irregularities",
+      "routeGroup": "FINANCIAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_008"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_006"
+      ],
+      "revealedFactIds": [
+        "fact_010",
+        "fact_011"
+      ],
+      "revealedEvidenceIds": [
+        "ev_007"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_012",
+      "name": "Connect Vendor Activity to Ashley Access",
+      "routeGroup": "FINANCIAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_009"
+      ],
+      "requiredFactIds": [
+        "fact_010"
+      ],
+      "requiredEvidenceIds": [
+        "ev_007"
+      ],
+      "revealedFactIds": [
+        "fact_012"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_013",
+      "name": "Recover Accountant Communication",
+      "routeGroup": "DIGITAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_006"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_004"
+      ],
+      "revealedFactIds": [
+        "fact_013",
+        "fact_014"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_014",
+      "name": "Recover Grant and Ashley Exchange",
+      "routeGroup": "DIGITAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_006"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_004"
+      ],
+      "revealedFactIds": [
+        "fact_015"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_015",
+      "name": "Recover Deleted Communication Artifacts",
+      "routeGroup": "DIGITAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_007"
+      ],
+      "requiredFactIds": [
+        "fact_015"
+      ],
+      "requiredEvidenceIds": [
+        "ev_004"
+      ],
+      "revealedFactIds": [
+        "fact_022"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_016",
+      "name": "Develop Ashley Movement Evidence",
+      "routeGroup": "MOVEMENT",
+      "triggerType": "OBTAIN_RECORD",
+      "triggerEntityIds": [
+        "char_002"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [],
+      "revealedEvidenceIds": [
+        "ev_008"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_017",
+      "name": "Interview Nora Bell",
+      "routeGroup": "WITNESS",
+      "triggerType": "INTERVIEW_CHARACTER",
+      "triggerEntityIds": [
+        "char_006"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_025"
+      ],
+      "revealedEvidenceIds": [
+        "ev_005"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_018",
+      "name": "Analyze Ashley Movement Timeline",
+      "routeGroup": "MOVEMENT",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_010"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_008"
+      ],
+      "revealedFactIds": [
+        "fact_016",
+        "fact_021"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_019",
+      "name": "Evaluate Workshop Tool",
+      "routeGroup": "FORENSIC",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_003"
+      ],
+      "requiredFactIds": [
+        "fact_002"
+      ],
+      "requiredEvidenceIds": [
+        "ev_002"
+      ],
+      "revealedFactIds": [
+        "fact_018",
+        "fact_019"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_020",
+      "name": "Analyze Footwear Impression",
+      "routeGroup": "FORENSIC",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_004"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_002"
+      ],
+      "revealedFactIds": [
+        "fact_018"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_021",
+      "name": "Identify Missing Laptop",
+      "routeGroup": "PROPERTY",
+      "triggerType": "INVESTIGATIVE_CORROBORATION",
+      "triggerEntityIds": [
+        "char_001",
+        "loc_001",
+        "loc_002"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_020"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_022",
+      "name": "Recover Laptop During Authorized Search",
+      "routeGroup": "WARRANT",
+      "triggerType": "AUTHORIZED_SEARCH",
+      "triggerEntityIds": [
+        "loc_003"
+      ],
+      "requiredFactIds": [
+        "fact_020"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_024"
+      ],
+      "revealedEvidenceIds": [
+        "ev_010"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_023",
+      "name": "Confirm Message Deletion",
+      "routeGroup": "DIGITAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_007"
+      ],
+      "requiredFactIds": [
+        "fact_015"
+      ],
+      "requiredEvidenceIds": [
+        "ev_004"
+      ],
+      "revealedFactIds": [
+        "fact_022"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_024",
+      "name": "Search Ashley SUV Lawfully",
+      "routeGroup": "WARRANT",
+      "triggerType": "AUTHORIZED_SEARCH",
+      "triggerEntityIds": [
+        "loc_003"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [],
+      "revealedEvidenceIds": [
+        "ev_009"
+      ],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_025",
+      "name": "Identify SUV Biological Material",
+      "routeGroup": "FORENSIC",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_012"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [
+        "ev_009"
+      ],
+      "revealedFactIds": [
+        "fact_023"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_026",
+      "name": "Analyze Recovered Laptop",
+      "routeGroup": "DIGITAL",
+      "triggerType": "FORENSIC_RESULT",
+      "triggerEntityIds": [
+        "forensic_test_013"
+      ],
+      "requiredFactIds": [
+        "fact_024"
+      ],
+      "requiredEvidenceIds": [
+        "ev_010"
+      ],
+      "revealedFactIds": [
+        "fact_013",
+        "fact_020",
+        "fact_024"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_027",
+      "name": "Ask Ashley About Cosmetic Contacts",
+      "routeGroup": "CHARACTER",
+      "triggerType": "INTERVIEW_TOPIC",
+      "triggerEntityIds": [
+        "char_002"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_026"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_028",
+      "name": "Verify Leah Alibi",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "ALIBI_VERIFICATION",
+      "triggerEntityIds": [
+        "char_003"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_027"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_029",
+      "name": "Obtain Isaac Alibi",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "INTERVIEW_CHARACTER",
+      "triggerEntityIds": [
+        "char_005"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_028"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_030",
+      "name": "Independently Verify Isaac Alibi",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "EXAMINE_LOCATION",
+      "triggerEntityIds": [
+        "loc_004"
+      ],
+      "requiredFactIds": [
+        "fact_028"
+      ],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_028"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_031",
+      "name": "Review Leah and Grant Conflict",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "INTERVIEW_OR_RECORD_REVIEW",
+      "triggerEntityIds": [
+        "char_003"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_029"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    },
+    {
+      "id": "discover_032",
+      "name": "Discover Isaac Threat",
+      "routeGroup": "ALTERNATIVE_SUSPECT",
+      "triggerType": "INTERVIEW_OR_MESSAGE_REVIEW",
+      "triggerEntityIds": [
+        "char_005"
+      ],
+      "requiredFactIds": [],
+      "requiredEvidenceIds": [],
+      "revealedFactIds": [
+        "fact_030"
+      ],
+      "revealedEvidenceIds": [],
+      "recoverable": true,
+      "persistent": true
+    }
+  ],
+  "routeProtections": [
+    {
+      "id": "route_protection_001",
+      "goal": "ESTABLISH_HOMICIDE",
+      "materiallyDistinctRoutes": [
+        {
+          "routeId": "route_scene_001",
+          "requiredFactIds": [
+            "fact_002",
+            "fact_003"
+          ]
+        },
+        {
+          "routeId": "route_scene_002",
+          "requiredFactIds": [
+            "fact_004",
+            "fact_019"
+          ]
+        }
+      ],
+      "minimumRoutesRequired": 2,
+      "permanentSoftLockAllowed": false
+    },
+    {
+      "id": "route_protection_002",
+      "goal": "ESTABLISH_FINANCIAL_MOTIVE",
+      "materiallyDistinctRoutes": [
+        {
+          "routeId": "route_financial_001",
+          "requiredFactIds": [
+            "fact_010",
+            "fact_011",
+            "fact_012"
+          ]
+        },
+        {
+          "routeId": "route_financial_002",
+          "requiredFactIds": [
+            "fact_013",
+            "fact_014",
+            "fact_024"
+          ]
+        }
+      ],
+      "minimumRoutesRequired": 2,
+      "permanentSoftLockAllowed": false
+    },
+    {
+      "id": "route_protection_003",
+      "goal": "ESTABLISH_ASHLEY_OPPORTUNITY",
+      "materiallyDistinctRoutes": [
+        {
+          "routeId": "route_opportunity_001",
+          "requiredFactIds": [
+            "fact_016",
+            "fact_021"
+          ]
+        },
+        {
+          "routeId": "route_opportunity_002",
+          "requiredFactIds": [
+            "fact_015",
+            "fact_025"
+          ]
+        }
+      ],
+      "minimumRoutesRequired": 2,
+      "permanentSoftLockAllowed": false
+    },
+    {
+      "id": "route_protection_004",
+      "goal": "ESTABLISH_CONCEALMENT",
+      "materiallyDistinctRoutes": [
+        {
+          "routeId": "route_concealment_001",
+          "requiredFactIds": [
+            "fact_022"
+          ]
+        },
+        {
+          "routeId": "route_concealment_002",
+          "requiredFactIds": [
+            "fact_020",
+            "fact_024"
+          ]
+        },
+        {
+          "routeId": "route_concealment_003",
+          "requiredFactIds": [
+            "fact_019"
+          ]
+        }
+      ],
+      "minimumRoutesRequired": 2,
+      "permanentSoftLockAllowed": false
+    },
+    {
+      "id": "route_protection_005",
+      "goal": "STRONGLY_CORROBORATE_ASHLEY",
+      "materiallyDistinctRoutes": [
+        {
+          "routeId": "route_strong_001",
+          "requiredFactIds": [
+            "fact_023"
+          ]
+        },
+        {
+          "routeId": "route_strong_002",
+          "requiredFactIds": [
+            "fact_024",
+            "fact_013"
+          ]
+        },
+        {
+          "routeId": "route_strong_003",
+          "requiredFactIds": [
+            "fact_012",
+            "fact_016",
+            "fact_022"
+          ]
+        }
+      ],
+      "minimumRoutesRequired": 2,
+      "permanentSoftLockAllowed": false
+    }
+  ]
 }
